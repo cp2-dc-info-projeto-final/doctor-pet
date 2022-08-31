@@ -2,15 +2,25 @@
 
 ## Lista dos Casos de Uso
 
- - [CDU 01](#CDU-01): Quisque id neque a erat imperdiet dictum et ut mauris.
- - [CDU 02](#CDU-02): Morbi fringilla dolor at mattis vestibulum.
- - [CDU 03](#CDU-03): Duis nec orci quis velit faucibus hendrerit tempus vel libero.
-
+ - [CDU 01](#CDU-01): Login
+ - [CDU 02](#CDU-02): Administrar quadro de horários
+ - [CDU 03](#CDU-03): Administrar cadastro dos funcionários
+ - [CDU 04](#CDU-04): Realizar consultas
+ - [CDU 05](#CDU-05): Gerencias de feedbacks
+ - [CDU 06](#CDU-06): Registrar materiais
+ - [CDU 07](#CDU-07): Criar conta
+ - [CDU 08](#CDU-08): Manter dados do veterinário
+ - [CDU 09](#CDU-09): Manter dados do animal
+ - [CDU 10](#CDU-10): Manter dados do cliente
+ - [CDU 11](#CDU-11): Armazenar dados no prontuário
+ - [CDU 12](#CDU-12): Realizar pedidos de exames
+ - [CDU 13](#CDU-13): Marcar consulta 
 
 ## Lista dos Atores
-
- - Cras tempor
- - Donec a lorem
+-gerente
+-veterinário
+-recepcionista 
+-cliente
 
 ## Diagrama de Casos de Uso
 
