@@ -5,7 +5,7 @@
  - [CDU 01](#CDU-01): Login
  - [CDU 02](#CDU-02): Administrar quadro de horários
  - [CDU 03](#CDU-03): Administrar cadastro dos funcionários
- - [CDU 04](#CDU-04): Realizar consultas
+ - [CDU 04](#CDU-04): Agendar consultas
  - [CDU 05](#CDU-05): Gerencias de feedbacks
  - [CDU 06](#CDU-06): Registrar materiais
  - [CDU 07](#CDU-07): Criar conta
@@ -14,7 +14,7 @@
  - [CDU 10](#CDU-10): Cadastrar dados do cliente
  - [CDU 11](#CDU-11): Armazenar dados no prontuário
  - [CDU 12](#CDU-12): Realizar pedidos de exames
- - [CDU 13](#CDU-13): Marcar consulta 
+ - [CDU 13](#CDU-13): Realizar consultas 
 
 ## Lista dos Atores
 - Gerente <br>
@@ -49,7 +49,7 @@ Ator
 2. O sistema exibe que o login e/ou senha são inválidos. 
 3. O fluxo retorna ao passo 1 do fluxo principal
 
-### CDU 02 - administrar quadro de horário
+### CDU 02 - Administrar quadro de horários
 Ator
 -gerente
 -recepcionista
@@ -95,8 +95,9 @@ Ator
 
 ### CDU 04- Agendar Consulta
 Ator
--recepcionista 
--gerente
+-Cliente
+-Recepcionista 
+-Gerente
 
  **Fluxo principal**
 1. O usuário seleciona a opção Agendar no menu principal
