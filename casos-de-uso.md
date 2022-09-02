@@ -111,10 +111,14 @@ Ator
 5. O sistema verifica se todos os dados foram fornecidos.
 6. O sistema exibe uma mensagem de confirmação. 
 
-**Fluxo Alternativo**
+**Fluxo Alternativo A**
 1. O usuário seleciona a opção Excluir Agendamento. 
 2. O sistema solicita o código do agendamento a ser excluído. 
-3. O usuário escolhe a opção Alterar Agendamento. 
-4. O sistema solicita os dados para a alteração dos agendamento. 
-5. O usuário escolhe a opção Cancelar. 
-6. O sistema volta ao passo 4 do Fluxo Principal.
+3. O usuário escolhe a opção Cancelar. 
+4. O sistema volta ao passo 4 do Fluxo Principal.
+
+**Fluxo Alternativo B**
+1. O usuário escolhe a opção Alterar Agendamento. 
+2. O sistema solicita os dados para a alteração dos agendamento. 
+3. O usuário escolhe a opção Cancelar. 
+4. O sistema volta ao passo 4 do Fluxo Principal.
