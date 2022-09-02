@@ -64,7 +64,7 @@ Ator
 4. O usuário verifica dia/horário de cada profissional.
  
 
-**Fluxo Alternativo A**
+**Fluxo Alternativo**
 
 1. O sistema solicita identificação do usuário.
 2. O usuário não tem permissão para acessar o quadro de horário.
@@ -85,13 +85,17 @@ Ator
 5. O sistema verifica se todos foram fornecidos
 6. O sistema exibe uma mensagem de confirmação.
 
-**Fluxo Alternativo**
+**Fluxo Alternativo A**
  
 1. O usuário seleciona a opção Excluir Profissional. 
 2. O sistema solicita o código do profissional a ser excluído. 
-3. O usuário escolhe a opção Alterar Profissional. 
-4. O sistema solicita o código do Profissional a ser alterado. 
-5. O usuário escolhe a opção Cancelar.
+3. O usuário escolhe a opção Cancelar.
+
+**Fluxo Alternativo B**
+ 
+1. O usuário escolhe a opção Alterar Profissional. 
+2. O sistema solicita o código do Profissional a ser alterado. 
+3. O usuário escolhe a opção Cancelar.
 
 ### CDU 04- Agendar Consulta
 Ator
