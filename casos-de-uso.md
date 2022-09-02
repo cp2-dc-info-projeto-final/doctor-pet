@@ -6,15 +6,11 @@
  - [CDU 02](#CDU-02): Administrar quadro de horários
  - [CDU 03](#CDU-03): Administrar cadastro dos funcionários
  - [CDU 04](#CDU-04): Agendar consultas
- - [CDU 05](#CDU-05): Gerenciamento de feedbacks
- - [CDU 06](#CDU-06): Registrar materiais
+ - [CDU 05](#CDU-05): Realizar consultas 
+ - [CDU 06](#CDU-06): Cadastrar dados do cliente
  - [CDU 07](#CDU-07): Criar conta
  - [CDU 08](#CDU-08): Cadastrar dados do veterinário
  - [CDU 09](#CDU-09): Cadastrar dados do animal
- - [CDU 10](#CDU-10): Cadastrar dados do cliente
- - [CDU 11](#CDU-11): Armazenar dados no prontuário
- - [CDU 12](#CDU-12): Realizar pedidos de exames
- - [CDU 13](#CDU-13): Realizar consultas 
 
 ## Lista dos Atores
 - Gerente <br>
