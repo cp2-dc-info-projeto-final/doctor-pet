@@ -6,7 +6,7 @@
  - [CDU 02](#CDU-02): Administrar quadro de horários
  - [CDU 03](#CDU-03): Administrar cadastro dos funcionários
  - [CDU 04](#CDU-04): Agendar consultas
- - [CDU 05](#CDU-05): Gerencias de feedbacks
+ - [CDU 05](#CDU-05): Gerenciamento de feedbacks
  - [CDU 06](#CDU-06): Registrar materiais
  - [CDU 07](#CDU-07): Criar conta
  - [CDU 08](#CDU-08): Cadastrar dados do veterinário
