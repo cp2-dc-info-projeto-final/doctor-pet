@@ -17,7 +17,7 @@
  - [CDU 13](#CDU-13): Marcar consulta 
 
 ## Lista dos Atores
--gerente
+-gerente <br>
 -funcionário
 -veterinário
 -recepcionista 
