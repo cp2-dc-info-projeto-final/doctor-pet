@@ -17,11 +17,11 @@
  - [CDU 13](#CDU-13): Marcar consulta 
 
 ## Lista dos Atores
--gerente <br>
--funcionário <br>
--veterinário <br>
--recepcionista <br>
--cliente
+- Gerente <br>
+- Funcionário <br>
+- Veterinário <br>
+- Recepcionista <br>
+- Cliente
 
 ## Diagrama de Casos de Uso
 
