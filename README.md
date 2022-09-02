@@ -3,9 +3,10 @@
 Projeto Final do Curso Técnico Integrado de Desenvolvimento de Sistemas - Colégio Pedro II - Campus Duque de Caxias
 
 **Integrantes:**
- - Fulano
- - Beltrano
- - Ciclano
+ - Jhonatha Rodrigues dos Santos
+ - Nicoly Ferreira Gomes
+ - Ramon Brasil Barboza Ofemann
+ - Thainá Schayder Valadão
 
  ## Descrição do Projeto
 
