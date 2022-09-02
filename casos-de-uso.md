@@ -117,4 +117,4 @@ Ator
 3. O usuário escolhe a opção Alterar Agendamento. 
 4. O sistema solicita os dados para a alteração dos agendamento. 
 5. O usuário escolhe a opção Cancelar. 
-6.O sistema volta ao passo 4 do Fluxo Principal.
+6. O sistema volta ao passo 4 do Fluxo Principal.
