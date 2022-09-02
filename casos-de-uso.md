@@ -18,9 +18,9 @@
 
 ## Lista dos Atores
 -gerente <br>
--funcionário
--veterinário
--recepcionista 
+-funcionário <br>
+-veterinário <br>
+-recepcionista <br>
 -cliente
 
 ## Diagrama de Casos de Uso
