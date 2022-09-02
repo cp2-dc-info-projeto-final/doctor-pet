@@ -33,8 +33,6 @@
 Ator
 -Gerente
 -Funcionário
--Veterinário
--Recepcionista 
 -Cliente 
 
 **Fluxo Principal**
