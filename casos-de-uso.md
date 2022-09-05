@@ -7,10 +7,8 @@
  - [CDU 03](#CDU-03): Administrar cadastro dos funcionários
  - [CDU 04](#CDU-04): Agendar consultas
  - [CDU 05](#CDU-05): Realizar consultas 
- - [CDU 06](#CDU-06): Cadastrar dados do cliente
+ - [CDU 06](#CDU-06): Cadastrar dados
  - [CDU 07](#CDU-07): Criar conta
- - [CDU 08](#CDU-08): Cadastrar dados do veterinário
- - [CDU 09](#CDU-09): Cadastrar dados do animal
 
 ## Lista dos Atores
 - Gerente <br>
