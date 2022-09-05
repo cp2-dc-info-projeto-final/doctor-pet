@@ -39,9 +39,9 @@ Ator
 
 **Fluxo Alternativo**
 
-1. Login e/ou senha inválidos 
+1. Login e/ou senha inválidos.
 2. O sistema exibe que o login e/ou senha são inválidos. 
-3. O fluxo retorna ao passo 1 do fluxo principal
+3. O fluxo retorna ao passo 1 do fluxo principal.
 
 ### CDU 02 - Administrar quadro de horários
 Ator
@@ -53,7 +53,7 @@ Ator
 
 1. O sistema solicita identificação do usuário.
 2. O usuário tem permissão para acessar o quadro de horário.
-3. O sistema exibe uma mensagem de confirmação
+3. O sistema exibe uma mensagem de confirmação.
 4. O sistema libera o acesso ao quadro de horário.
 4. O usuário verifica dia/horário de cada profissional.
  
@@ -74,9 +74,9 @@ Ator
 
 1. O usuário seleciona a opção cadastrar Profissional no menu principal. 
 2. O usuário escolhe a opção cadastrar Profissional.
-3. O sistema solicita os dados necessários para o cadastro do Profissional 
+3. O sistema solicita os dados necessários para o cadastro do Profissional.
 4. O usuário fornece os dados e confirma a operação.
-5. O sistema verifica se todos foram fornecidos
+5. O sistema verifica se todos foram fornecidos.
 6. O sistema exibe uma mensagem de confirmação.
 
 **Fluxo Alternativo A**
@@ -98,9 +98,9 @@ Ator
 -Gerente
 
  **Fluxo principal**
-1. O usuário seleciona a opção Agendar no menu principal
-2. O usuário escolhe a opção Agendar consulta
-3. O sistema solicita os dados necessários para o agendamento do cliente 
+1. O usuário seleciona a opção Agendar no menu principal.
+2. O usuário escolhe a opção Agendar consulta.
+3. O sistema solicita os dados necessários para o agendamento do cliente. 
 4. O usuário fornece os dados e confirma a operação.
 5. O sistema verifica se todos os dados foram fornecidos.
 6. O sistema exibe uma mensagem de confirmação. 
@@ -116,3 +116,24 @@ Ator
 2. O sistema solicita os dados para a alteração dos agendamento. 
 3. O usuário escolhe a opção Cancelar. 
 4. O sistema volta ao passo 4 do Fluxo Principal.
+
+### CDU 06 - Cadastrar dados
+Ator
+-Cliente
+-Gerente
+-Recepcionista
+
+**Fluxo Principal**
+
+1. O cliente enviará seus dados ao sistema.
+2. O gerente receberá os dados do cliente. 
+3. O gerente fará a validação dos dados.
+4. Após a validação, os dados serão enviados para a recepcionista.
+5. A recepcionista inserirá os dados no prontuário.
+
+**Fluxo Alternativo A**
+
+1. O cliente enviará seus dados ao sistema.
+2. O gerente receberá os dados do cliente.
+3. Dados não validados pelo gerente.
+4. O cliente deverá reenviar os seus dados para validação.
