@@ -25,7 +25,7 @@
 
 ## Descrição dos Casos de Uso
 
-## #CDU 01 -Login
+### CDU 01 - Login
 Ator
 -Gerente
 -Funcionário
@@ -93,7 +93,7 @@ Ator
 2. O sistema solicita o código do Profissional a ser alterado. 
 3. O usuário escolhe a opção Cancelar.
 
-### CDU 04- Agendar Consulta
+### CDU 04 - Agendar Consulta
 Ator
 -Cliente
 -Recepcionista 
