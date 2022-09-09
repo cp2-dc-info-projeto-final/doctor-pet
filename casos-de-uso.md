@@ -117,6 +117,20 @@ Ator
 3. O usuário escolhe a opção Cancelar. 
 4. O sistema volta ao passo 4 do Fluxo Principal.
 
+### CDU 05 - Realizar consultas
+Ator
+-Recepcionista
+-Veterinário
+
+**Fluxo principal**
+
+1. O recepcionista digita os dados do cliente no sistema.
+2. O sistema confirma a consulta do cliente.
+3. O sistema envia a ficha do cliente ao veterinário.
+4. O veterinário abre a ficha do cliente.
+5. O veterinário cria um relatório da consulta.
+6. O sistema adiciona o novo relatório a  ficha do cliente.
+
 ### CDU 06 - Cadastrar dados
 Ator
 -Cliente
