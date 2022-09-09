@@ -151,3 +151,38 @@ Ator
 2. O gerente receberá os dados do cliente.
 3. Dados não validados pelo gerente.
 4. O cliente deverá reenviar os seus dados para validação.
+
+### CDU 07 - Criar conta
+Ator
+-Cliente
+-Gerente
+
+**Fluxo principal**
+
+1. O cliente solicita a criação de uma conta.
+2. O sistema apresenta o formulário para o preenchimento com os dados do cliente.
+3. O cliente preenche o formulário com os dados necessários para a criação da conta.
+4. O sistema valida os dados do cliente.
+5. O sistema armazena as informações do cliente.
+6. O gerente analisa os dados do cliente.
+7. O gerente valida a conta do cliente.
+
+**Fluxo alternativo A**
+
+1. O cliente solicita a criação de uma conta.
+2. O sistema apresenta o formulário para o preenchimento com os dados do cliente.
+3. O cliente preenche o formulário incorretamente.
+4. O sistema imprime uma mensagem de erro.
+5. Caso de uso encerrado.
+
+**Fluxo alternativo B**
+
+1. O cliente solicita a criação de uma conta.
+2. O sistema apresenta o formulário para o preenchimento com os dados do cliente.
+3. O ator cliente preenche o formulário com os dados necessários para a criação da conta.
+4. O sistema valida os dados do cliente.
+5. O sistema armazena as informações do cliente.
+6. O gerente analisa os dados do cliente.
+7. O gerente não valida a conta do cliente.
+8. O sistema elimina os dados do cliente.
+9. Caso de uso encerrado.
