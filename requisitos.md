@@ -4,11 +4,11 @@
 
 ### RF 01 - salvar informações no banco de dados:
 
-  Por meio de formulários em PHP, o site inserirá as informações em umm banco de dados programado em MySQL.
+	Por meio de formulários em PHP, o site inserirá as informações em umm banco de dados programado em MySQL.
 
 ### RF 02 - Automatização de Processos:
 
-	O segundo requisito é a automatização de processos como agendamento, recepção e outras atividades. 
+O segundo requisito é a automatização de processos como agendamento, recepção e outras atividades. 
 Com ele, há redução da incidência de erro humano e concentração de profissionais em atividades mais estratégicas para o crescimento da clínica vet. 
 O agendamento online, por exemplo, facilita a vida do paciente, já que ele pode acessar o site de qualquer dispositivo, 24 horas, sete dias por semana. 
 Além disso, não é mais necessário que a recepcionista se responsabilize também pela agenda, 
