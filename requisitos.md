@@ -2,24 +2,51 @@
 
 ## Requisitos Funcionais
 
-### RF 01 - salvar informações no banco de dados:
+### RF 01
 
-	Por meio de formulários em PHP, o site inserirá as informações em umm banco de dados programado em MySQL.
+Cadastrar usuário (Listar, Incluir, Excluir e Editar)
 
-### RF 02 - Automatização de Processos:
+### RF 02
 
-O segundo requisito é a automatização de processos como agendamento, recepção e outras atividades. 
-Com ele, há redução da incidência de erro humano e concentração de profissionais em atividades mais estratégicas para o crescimento da clínica vet. 
-O agendamento online, por exemplo, facilita a vida do paciente, já que ele pode acessar o site de qualquer dispositivo, 24 horas, sete dias por semana. 
-Além disso, não é mais necessário que a recepcionista se responsabilize também pela agenda, 
-liberando essa profissional para um atendimento mais humanizado no momento da chegada do paciente ao consultório.
+Cadastrar funcionário (Listar, Incluir, Excluir e Editar)
+
+### RF 03
+
+Cadastrar administradores (Listar, Incluir, Excluir e Editar)
+
+### RF 04
+
+Administração de usuários (Listar, Incluir, Excluir e Editar)
+
+### RF 05
+
+Cadastrar serviços (Listar, Incluir, Excluir e Editar)
+
+### RF 06
+
+Disponibilizar horários por tipo de serviço (Listar, Incluir, Excluir e Editar)
+
+### RF 07
+
+Agendar serviço (Listar, Incluir, Excluir e Editar)
 
 ## Requisitos Não-Funcionais
 
 ### RNF 01
 
-Nulla facilisi. Etiam tempus dolor et odio tincidunt fermentum. Donec pharetra nulla eu euismod maximus. Maecenas eu mauris tincidunt, pulvinar tellus sed, blandit eros.
+Todo o site fará uso das seguintes tecnologias:
+
+PHP
+HTML
+CSS
+Bootstrap
+JavaScript
+MySQL
 
 ### RNF 02
 
-Nam id enim ut quam faucibus scelerisque at non diam. Morbi eget eleifend lectus, quis fringilla elit. Morbi iaculis, elit vel accumsan hendrerit, ipsum purus varius lacus, eget facilisis massa mauris ac ipsum.
+O site fará uso do PHP para realizar a integração ao banco de dados MySQL.
+
+### RNF 03
+
+O site também fara uso de ferramentas de acessibilidade, tais como alto contraste e aumento de fonte.
