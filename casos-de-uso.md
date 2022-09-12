@@ -73,7 +73,7 @@ Ator
 
 **Fluxo Principal** 
 
-1. O usuário seleciona a opção cadastrar Profissional no menu principal. 
+1. O usuário seleciona a opção cadastrar usuário no menu principal. 
 2. O usuário escolhe a opção cadastrar Profissional.
 3. O sistema solicita os dados necessários para o cadastro do Profissional.
 4. O usuário fornece os dados e confirma a operação.
@@ -90,6 +90,26 @@ Ator
  
 1. O usuário escolhe a opção Alterar Profissional. 
 2. O sistema solicita o código do Profissional a ser alterado. 
+3. O usuário escolhe a opção Cancelar.
+
+### CDU 04 - Administrar cadastro dos clientes
+
+Ator
+-Gerente
+
+**Fluxo Principal** 
+
+1. O usuário seleciona a opção cadastrar usuário no menu principal. 
+2. O usuário escolhe a opção cadastrar cliente.
+3. O sistema solicita os dados necessários para o cadastro do cliente.
+4. O usuário fornece os dados e confirma a operação.
+5. O sistema verifica se todos foram fornecidos.
+6. O sistema exibe uma mensagem de confirmação.
+
+**Fluxo Alternativo A**
+ 
+1. O usuário seleciona a opção Excluir cliente. 
+2. O sistema solicita o código do cliente a ser excluído. 
 3. O usuário escolhe a opção Cancelar.
 
 ### CDU 05 - Agendar Consulta
