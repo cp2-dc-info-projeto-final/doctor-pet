@@ -153,4 +153,23 @@ Ator
 3. Dados não validados pelo gerente.
 4. O cliente deverá reenviar os seus dados para validação.
 
-### CDU 08 -
+### CDU 08 -Cadastrar dados do funcionário
+Ator
+-Funcionário
+-Gerente
+-Recepcionista
+
+**Fluxo Principal**
+
+1. O funcionário enviará seus dados ao sistema.
+2. O gerente receberá os dados do funcionário. 
+3. O gerente fará a validação dos dados.
+4. Após a validação, os dados serão enviados para a recepcionista.
+5. A recepcionista inserirá os dados no prontuário.
+
+**Fluxo Alternativo A**
+
+1. O funcionário enviará seus dados ao sistema.
+2. O gerente receberá os dados do funcionário.
+3. Dados não validados pelo gerente.
+4. O funcionário deverá reenviar os seus dados para validação.
