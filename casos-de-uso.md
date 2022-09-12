@@ -5,11 +5,11 @@
  - [CDU 01](#CDU-01): Login
  - [CDU 02](#CDU-02): Administrar quadro de horários
  - [CDU 03](#CDU-03): Administrar cadastro dos funcionários
- - [CDU 03](#CDU-04): Administrar cadastro dos clientes
- - [CDU 04](#CDU-05): Agendar consultas
- - [CDU 05](#CDU-06): Editar consultas 
- - [CDU 06](#CDU-07): Cadastrar dados clientes
- - [CDU 07](#CDU-08): Cadastrar dados funcionários
+ - [CDU 04](#CDU-04): Administrar cadastro dos clientes
+ - [CDU 05](#CDU-05): Agendar consultas
+ - [CDU 06](#CDU-06): Editar consultas 
+ - [CDU 07](#CDU-07): Cadastrar dados dos clientes
+ - [CDU 08](#CDU-08): Cadastrar dados dos funcionários
  
 ## Lista dos Atores
 - Gerente <br>
@@ -66,7 +66,7 @@ Ator
 3. O sistema exibe uma mensagem de erro.
 3. O sistema retorna ao passo 1 do fluxo principal.
 
-### CDU 03 - Administrar cadastro do funcionário
+### CDU 03 - Administrar cadastro dos funcionários
 
 Ator
 -Gerente
@@ -92,7 +92,7 @@ Ator
 2. O sistema solicita o código do Profissional a ser alterado. 
 3. O usuário escolhe a opção Cancelar.
 
-### CDU 04 - Agendar Consulta
+### CDU 05 - Agendar Consulta
 Ator
 -Cliente
 -Recepcionista 
@@ -118,7 +118,7 @@ Ator
 3. O usuário escolhe a opção Cancelar. 
 4. O sistema volta ao passo 4 do Fluxo Principal.
 
-### CDU 05 - Realizar consultas
+### CDU 06 - Editar consultas
 Ator
 -Recepcionista
 -Veterinário
@@ -132,7 +132,7 @@ Ator
 5. O veterinário cria um relatório da consulta.
 6. O sistema adiciona o novo relatório a  ficha do cliente.
 
-### CDU 06 - Cadastrar dados
+### CDU 07 - Cadastrar dados do cliente
 Ator
 -Cliente
 -Gerente
@@ -153,37 +153,4 @@ Ator
 3. Dados não validados pelo gerente.
 4. O cliente deverá reenviar os seus dados para validação.
 
-### CDU 07 - Criar conta
-Ator
--Cliente
--Gerente
-
-**Fluxo principal**
-
-1. O cliente solicita a criação de uma conta.
-2. O sistema apresenta o formulário para o preenchimento com os dados do cliente.
-3. O cliente preenche o formulário com os dados necessários para a criação da conta.
-4. O sistema valida os dados do cliente.
-5. O sistema armazena as informações do cliente.
-6. O gerente analisa os dados do cliente.
-7. O gerente valida a conta do cliente.
-
-**Fluxo alternativo A**
-
-1. O cliente solicita a criação de uma conta.
-2. O sistema apresenta o formulário para o preenchimento com os dados do cliente.
-3. O cliente preenche o formulário incorretamente.
-4. O sistema imprime uma mensagem de erro.
-5. Caso de uso encerrado.
-
-**Fluxo alternativo B**
-
-1. O cliente solicita a criação de uma conta.
-2. O sistema apresenta o formulário para o preenchimento com os dados do cliente.
-3. O ator cliente preenche o formulário com os dados necessários para a criação da conta.
-4. O sistema valida os dados do cliente.
-5. O sistema armazena as informações do cliente.
-6. O gerente analisa os dados do cliente.
-7. O gerente não valida a conta do cliente.
-8. O sistema elimina os dados do cliente.
-9. Caso de uso encerrado.
+### CDU 08 -
