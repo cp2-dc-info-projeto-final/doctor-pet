@@ -36,12 +36,12 @@ Agendar serviço (Listar, Incluir, Excluir e Editar)
 
 Todo o site fará uso das seguintes tecnologias:
 
-PHP
-HTML
-CSS
-Bootstrap
-JavaScript
-MySQL
+PHP <br>
+HTML <br>
+CSS <br>
+Bootstrap <br>
+JavaScript <br>
+MySQL <br>
 
 ### RNF 02
 
