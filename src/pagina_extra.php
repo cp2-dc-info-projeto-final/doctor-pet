@@ -10,17 +10,23 @@
     $operacao = $_REQUEST["operacao"];
 
     if($operacao == "inserir"){
-        $nome = $_POST["nome"]; 
+        $nome = $_POST["nome"];
+        $cpf = $_POST["cpf"];
         $email = $_POST["email"];
+        $telefone = $_POST["telefone"];
+        $nascimento = $_POST["nascimento"];
         $senha = $_POST["senha"];
         $senha_rep = $_POST["senha_rep"];
-        $data_nasc = $_POST["data_nasc"];
-        $bandeiraCartao = $_POST["bandeiraCartao"];
 
         $erro = 0;
 
         if(empty($nome) or strstr($nome, ' ') == false){
             echo "Por favor, preencha o nome completo.<br>";
+            $erro = 1;
+        }
+
+        if(strstr ($cpf, '.','-') == false or strlen($cpf) != 14){
+            echo "Por favor, digite o CPF corretamente.<br>";
             $erro = 1;
         }
 
@@ -30,7 +36,7 @@
         }
 
         $sql = "SELECT * FROM cliente WHERE email = '$email';";
-        $res = mysqli_query($mysqli, sql);
+        $res = mysqli_query($mysqli, $sql);
     
         //Testa se já existe o e-mail cadastrado
         if(mysqli_num_rows($res) == 1){
@@ -50,25 +56,20 @@
         }
 
 
-        if(empty($data_nasc)){
+        if(empty($nascimento)){
             echo "Por favor, preencha a data.<br>";
             $erro = 1;
         }
-
-        if(empty($bandeiraCartao)){
-            echo "Por favor, escolha uma bandeira do cartão de crédito.<br>";
-            $erro = 1;
-        }
-
         if($erro == 0){
-            $sql = "INSERT INTO cliente (nome,email,senha,data_nasc,cartao)";
-            $sql .= "VALUES ('$nome','$email','$senha','$data_nasc', '$bandeiraCartao');";  
+            $sql = "INSERT INTO cliente (nome,cpf,email,telefone,senha,nascimento)";
+            $sql .= "VALUES ('$nome','$cpf','$email','$telefone','$senha','$nascimento');";
             mysqli_query($mysqli,$sql);
             echo "Nome: $nome <br>";
+            echo "CPF: $cpf <br>";
             echo "E-mail: $email <br>";
-            echo "Data de nascimento: $data_nasc <br>";
-            echo "Bandeira do cartão de crédtio: $bandeiraCartao <br>"; 
-            echo "<a href='form_extra.html'>Voltar para o início</a>"; 
+            echo "Telefone: $telefone <br>";
+            echo "Data de nascimento: $nascimento <br>";
+            echo "<a href='form_extra.html'>Voltar para o início</a>";
         }
     }
     else if($operacao == "exibir"){
@@ -79,11 +80,12 @@
             $cliente = mysqli_fetch_array($res);
             echo "Nome: ".$cliente["nome"]."<br>";
             echo "E-mail: ".$cliente["email"]."<br>";
-            echo "Data de nascimento: ".$cliente["data_nasc"]."<br>";
-            echo "Bandeira do cartão: ".$cliente["cartao"]."<br>";
-            echo "<a href='altera.php?cod_cliente=".$cliente["cod_cliente"]."'>
+            echo "Data de nascimento: ".$cliente["nascimento"]."<br>";
+            echo "CPF: ".$cliente["cpf"]."<br>";
+            echo "Telefone: ".$cliente["telefone"]."<br>";
+            echo "<a href='altera.php?id_cliente=".$cliente["id_cliente"]."'>
             Editar cliente</a><br>";
-            echo "<a href='pagina_extra.php?operacao=excluir&cod_cliente=".$cliente["cod_cliente"]."'>
+            echo "<a href='pagina_extra.php?operacao=excluir&id_cliente=".$cliente["id_cliente"]."'>
             Excluir cliente</a><br>";
             echo "---------------------<br>";
         }
@@ -97,17 +99,23 @@
             $cliente = mysqli_fetch_array($res);
             echo "Nome: ".$cliente["nome"]."<br>";
             echo "E-mail: ".$cliente["email"]."<br>";
-            echo "Data de nascimento: ".$cliente["data_nasc"]."<br>";
-            echo "Bandeira do cartão: ".$cliente["cartao"]."<br>";
+            echo "Data de nascimento: ".$cliente["nascimento"]."<br>";
+            echo "CPF: ".$cliente["cpf"]."<br>";
+            echo "Telefone: ".$cliente["telefone"]."<br>";
+            echo "<a href='altera.php?id_cliente=".$cliente["id_cliente"]."'>
+            Editar cliente</a><br>";
+            echo "<a href='pagina_extra.php?operacao=excluir&id_cliente=".$cliente["id_cliente"]."'>
+            Excluir cliente</a><br>";
             echo "---------------------<br>";
         }
     }
     else if($operacao == "editar"){
-        $cod_cliente = $_POST["cod_cliente"]; 
-        $nome = $_POST["nome"]; 
+        $id_cliente = $_POST["id_cliente"];
+        $nome = $_POST["nome"];
+        $cpf = $_POST["cpf"];
         $email = $_POST["email"];
-        $data_nasc = $_POST["data_nasc"];
-        $bandeiraCartao = $_POST["bandeiraCartao"];
+        $telefone = $_POST["telefone"];
+        $nascimento = $_POST["nascimento"];
 
         $erro = 0;
 
@@ -116,25 +124,35 @@
             $erro = 1;
         }
 
+        if(strstr ($cpf, '.','-') == false or strlen($cpf) != 14){
+            echo "Por favor, digite o CPF corretamente.<br>";
+            $erro = 1;
+        }
+
         if(strlen($email) < 10 or strstr($email, '@') == false){
             echo "Por favor, preencha o e-mail corretamente.<br>";
             $erro = 1;
         }
 
-        if(empty($data_nasc)){
+        $sql = "SELECT * FROM cliente WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+    
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
+            echo "<p><a href='login.html'>Página de login</a></p>";
+            $erro = 1;
+        }
+
+        if(empty($nascimento)){
             echo "Por favor, preencha a data.<br>";
             $erro = 1;
         }
 
-        if(empty($bandeiraCartao)){
-            echo "Por favor, escolha uma bandeira do cartão de crédito.<br>";
-            $erro = 1;
-        }
-
         if($erro == 0){
-            $sql = "UPDATE cliente SET nome = '$nome', email = '$email', 
-            data_nasc = '$data_nasc', cartao = '$bandeiraCartao'";
-            $sql .= "WHERE cod_cliente = $cod_cliente;";  
+            $sql = "UPDATE cliente SET nome = '$nome', cpf = '$cpf', email = '$email', 
+            nascimento = '$nascimento', telefone = '$telefone'";
+            $sql .= "WHERE id_cliente = $id_cliente;";  
             mysqli_query($mysqli,$sql);
 
             echo "Cliente atualizado com sucesso!<br>";
@@ -142,8 +160,8 @@
         }
     }
     else if($operacao == "excluir"){
-        $cod_cliente = $_GET["cod_cliente"];
-        $sql = "DELETE FROM cliente WHERE cod_cliente = $cod_cliente;"; 
+        $id_cliente = $_GET["id_cliente"];
+        $sql = "DELETE FROM cliente WHERE id_cliente = $id_cliente;"; 
         mysqli_query($mysqli,$sql);
         echo "Cliente excluído com sucesso!<br>";
         echo "<a href='form_extra.html'>Voltar para o início</a>";

@@ -1,32 +1,27 @@
 <?php 
     include "conecta_mysql.inc";
-    $cod_cliente = $_GET["cod_cliente"];
-    $sql = "SELECT * FROM cliente WHERE cod_cliente = $cod_cliente;"; 
+    $id_cliente = $_GET["id_cliente"];
+    $sql = "SELECT * FROM cliente WHERE id_cliente = $id_cliente;"; 
     $res = mysqli_query($mysqli,$sql);
     $cliente = mysqli_fetch_array($res);
 ?>
 <html>
     <head>
-        <title>Edi√ß√£o de Cliente</title>
+        <title>EdiÁ„o de Usu·rio</title>
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>Edi√ß√£o de Cliente</h1>
-        <form action="pagina_extra.php" method="POST"> 
+        <meta charset="UTF-8">
+        <h1>EdiÁ„o de Usu·rio</h1>
+        <form action="pagina_extra.php" method="POST">
             <input type="hidden" name="operacao" value="editar">
-            <input type="hidden" name="cod_cliente" value="<?php echo $cod_cliente?>">
-            <p>Nome: <input type="text" name="nome" value="<?php echo $cliente['nome']?>"></p>
-            <p>E-mail: <input type="text" name="email" value="<?php echo $cliente['email']?>"></p>
-            <p>Data de Nascimento: <input type="date" name="data_nasc" value="<?php echo $cliente['data_nasc']?>"></p>
-            <p>Bandeira do cart√£o de cr√©dito: 
-                <select name="bandeiraCartao">
-                    <option value="">Escolha uma bandeira do cart√£o de cr√©dito</option>
-                    <option value="Visa" <?php echo ($cliente['cartao'] == 'Visa' ? 'selected':'') ?>>Visa</option>
-                    <option value="MasterCard" <?php echo ($cliente['cartao'] == 'MasterCard' ? 'selected':'') ?>>MasterCard</option>
-                    <option value="Visa Electron" <?php echo ($cliente['cartao'] == 'Visa Electron' ? 'selected':'') ?>>Visa Electron</option>
-                </select>
-            </p>              
-            <p><input type="submit" value="Enviar"></p> 
+            <input type="hidden" name="id_cliente" value="<?php echo $id_cliente?>">
+            <p>Nome: <input type="text" name="nome"></p>
+            <p>CPF: <input type="text" name="cpf"></p>
+            <p>E-mail: <input type="text" name="email"></p>
+            <p>Telefone: <input type="text" name="telefone"></p>
+            <p>Data de Nascimento: <input type="date" name="nascimento"></p>
+            <p><input type="submit" value="Enviar"></p>
         </form>
     </body>
 </html>
