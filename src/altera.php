@@ -1,27 +1,37 @@
 <?php 
     include "conecta_mysql.inc";
-    $id_cliente = $_GET["id_cliente"];
-    $sql = "SELECT * FROM cliente WHERE id_cliente = $id_cliente;"; 
+    $cod_cliente = $_GET["cod_cliente"];
+    $sql = "SELECT * FROM cliente WHERE cod_cliente = $cod_cliente;"; 
     $res = mysqli_query($mysqli,$sql);
     $cliente = mysqli_fetch_array($res);
 ?>
 <html>
     <head>
-        <title>EdiÁ„o de Usu·rio</title>
+        <title>Edi√ß√£o de Cliente</title>
         <meta charset="UTF-8">
     </head>
     <body>
-        <meta charset="UTF-8">
-        <h1>EdiÁ„o de Usu·rio</h1>
-        <form action="pagina_extra.php" method="POST">
+        <h1>Edi√ß√£o de Cliente</h1>
+        <form action="pagina_extra.php" method="POST"> 
             <input type="hidden" name="operacao" value="editar">
-            <input type="hidden" name="id_cliente" value="<?php echo $id_cliente?>">
-            <p>Nome: <input type="text" name="nome"></p>
-            <p>CPF: <input type="text" name="cpf"></p>
-            <p>E-mail: <input type="text" name="email"></p>
-            <p>Telefone: <input type="text" name="telefone"></p>
-            <p>Data de Nascimento: <input type="date" name="nascimento"></p>
-            <p><input type="submit" value="Enviar"></p>
+            <input type="hidden" name="cod_cliente" value="<?php echo $cod_cliente?>">
+            <p>Nome: <input type="text" name="nome" value="<?php echo $cliente['nome']?>"></p>
+            <p>E-mail: <input type="text" name="email" value="<?php echo $cliente['email']?>"></p>
+            <p>CPF: <input type="text" name="CPF" value="<?php echo $cliente['CPF']?>"></p>
+            <p>telefone: <input type="text" name="telefone" value="<?php echo $cliente['telefone']?>"></p>
+            <p>endere√ßo: <input type="text" name="endere√ßo" value="<?php echo $cliente['endere√ßo']?>"></p>
+            <p>nome do pet: <input type="text" name="nome do pet" value="<?php echo $cliente['nome do pet']?>"></p>
+            <p>peso do pet: <input type="text" name="peso do pet" value="<?php echo $cliente['peso do pet']?>"></p>
+            <p>esp√©cie: <input type="number" name="esp√©cie" value="<?php echo $cliente['esp√©cie']?>"></p>
+            <p>Sexo do pet: 
+                <select name="sexo">
+                    <option value="">defina o sexo do pet </option>
+                    <option value="macho" <?php echo ($cliente['sexo'] == 'macho' ? 'selected':'') ?>>macho</option>
+                    <option value="femea" <?php echo ($cliente['sexo'] == 'femea' ? 'selected':'') ?>>femea</option>
+                    
+                </select>
+            </p>              
+            <p><input type="submit" value="Enviar"></p> 
         </form>
     </body>
 </html>
