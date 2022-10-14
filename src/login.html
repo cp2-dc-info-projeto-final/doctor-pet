@@ -1,12 +1,21 @@
 <html>
-    <head>
-        <title>LOGIN</title>
-        <meta charset="UTF-8">
-    </head>
+<head>
+    <link rel="stylesheet" href="_css/bootstrap.css">
+    <title>LOGIN</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        body {
+            background-color: cyan;
+        }
+    </style>
+</head>
     <body>
         <h1>LOGIN</h1>
         <form action="login.php" method="POST">
-            <p>E-mail: <input type="text" name="email"></p>
+            <p>E-mail: <input type="email" name="email"
+                placeholder="exemplo@gmail.com"
+                pattern=".+@gmail.com"></p>
             <p>Senha: <input type="password" name="senha"></p>
             <p><input type="submit" value="Enviar"></p>
         </form>

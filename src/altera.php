@@ -1,5 +1,6 @@
 <?php 
     include "conecta_mysql.inc";
+    include "autentica.php";
     $id_cliente = $_GET["id_cliente"];
     $sql = "SELECT * FROM cliente WHERE id_cliente = $id_cliente;"; 
     $res = mysqli_query($mysqli,$sql);
@@ -7,8 +8,15 @@
 ?>
 <html>
     <head>
+        <link rel="stylesheet" href="_css/bootstrap.css">
         <title>Edição de Usuário</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+body {
+  background-color: cyan;
+}
+</style>
     </head>
     <body>
         <meta charset="UTF-8">
@@ -17,9 +25,14 @@
             <input type="hidden" name="operacao" value="editar">
             <input type="hidden" name="id_cliente" value="<?php echo $id_cliente?>">
             <p>Nome: <input type="text" name="nome"></p>
-            <p>CPF: <input type="text" name="cpf"></p>
-            <p>E-mail: <input type="text" name="email"></p>
-            <p>Telefone: <input type="text" name="telefone"></p>
+            <p>CPF: <input type="text" name="cpf"
+                placeholder="xxx.xxx.xxx-xx"></p>
+            <p>E-mail: <input type="email" name="email"
+                placeholder="exemplo@gmail.com"
+                pattern=".+@gmail.com"></p>
+            <p>Telefone: <input type="tel" name="telefone"
+                placeholder="(xx) xxxxx-xxxx"
+                pattern="[(]{1}[0-9]{2}[)]{1}[ ]{1}[0-9]{5}-[0-9]{4}"></p>
             <p>Data de Nascimento: <input type="date" name="nascimento"></p>
             <p><input type="submit" value="Enviar"></p>
         </form>

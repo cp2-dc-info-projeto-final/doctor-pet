@@ -1,8 +1,14 @@
 <?php include "conecta_mysql.inc"; ?>
 <html>
     <head>
+    <link rel="stylesheet" href="_css/bootstrap.css">
         <title>Dados Cadastrados</title>
         <meta charset="UTF-8">
+        <style>
+body {
+  background-color: cyan;
+}
+</style>
     </head>
     <body>
         <h1>Dados Cadastrados</h1>
@@ -17,6 +23,7 @@
         $nascimento = $_POST["nascimento"];
         $senha = $_POST["senha"];
         $senha_rep = $_POST["senha_rep"];
+        $tipo_usuario = $_POST["tipo_usuario"];
 
         $erro = 0;
 
@@ -40,9 +47,27 @@
     
         //Testa se já existe o e-mail cadastrado
         if(mysqli_num_rows($res) == 1){
-            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
+            echo "<a href='form_extra.php'>Voltar para o início</a>";
             $erro = 1;
+            $sql = "SELECT * FROM funcionario WHERE email = '$email';";
+            $res = mysqli_query($mysqli, $sql);
+        
+            //Testa se já existe o e-mail cadastrado
+            if(mysqli_num_rows($res) == 1){
+                echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
+                echo "<a href='form_extra.php'>Voltar para o início</a>";
+                $erro = 1;
+                $sql = "SELECT * FROM administrador WHERE email = '$email';";
+                $res = mysqli_query($mysqli, $sql);
+            
+                //Testa se já existe o e-mail cadastrado
+                if(mysqli_num_rows($res) == 1){
+                    echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
+                    echo "<a href='form_extra.php'>Voltar para o início</a>";
+                    $erro = 1;
+                }
+            }
         }
         
         if(strlen($senha) < 5 or strlen($senha) >10){
@@ -60,16 +85,47 @@
             echo "Por favor, preencha a data.<br>";
             $erro = 1;
         }
-        if($erro == 0){
+
+        if(empty($tipo_usuario)){
+            echo "Por favor, defina um tipo de usuário.<br>";
+            $erro = 1;
+        }
+        
+        if($erro == 0 AND $tipo_usuario == 'cliente'){
+            $senha_cript = password_hash($senha, PASSWORD_DEFAULT);
             $sql = "INSERT INTO cliente (nome,cpf,email,telefone,senha,nascimento)";
-            $sql .= "VALUES ('$nome','$cpf','$email','$telefone','$senha','$nascimento');";
+            $sql .= "VALUES ('$nome','$cpf','$email','$telefone','$senha_cript','$nascimento');";
             mysqli_query($mysqli,$sql);
             echo "Nome: $nome <br>";
             echo "CPF: $cpf <br>";
             echo "E-mail: $email <br>";
             echo "Telefone: $telefone <br>";
             echo "Data de nascimento: $nascimento <br>";
-            echo "<a href='form_extra.html'>Voltar para o início</a>";
+            echo "<a href='form_extra.php'>Voltar para o início</a>";
+        }
+        else if($erro == 0 AND $tipo_usuario == 'funcionario'){
+            $senha_cript = password_hash($senha, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO funcionario (nome,cpf,email,telefone,senha,nascimento)";
+            $sql .= "VALUES ('$nome','$cpf','$email','$telefone','$senha_cript','$nascimento');";
+            mysqli_query($mysqli,$sql);
+            echo "Nome: $nome <br>";
+            echo "CPF: $cpf <br>";
+            echo "E-mail: $email <br>";
+            echo "Telefone: $telefone <br>";
+            echo "Data de nascimento: $nascimento <br>";
+            echo "<a href='form_extra.php'>Voltar para o início</a>";
+        }
+        else if($erro == 0 AND $tipo_usuario == 'administrador'){
+            $senha_cript = password_hash($senha, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO administrador (nome,cpf,email,telefone,senha,nascimento)";
+            $sql .= "VALUES ('$nome','$cpf','$email','$telefone','$senha_cript','$nascimento');";
+            mysqli_query($mysqli,$sql);
+            echo "Nome: $nome <br>";
+            echo "CPF: $cpf <br>";
+            echo "E-mail: $email <br>";
+            echo "Telefone: $telefone <br>";
+            echo "Data de nascimento: $nascimento <br>";
+            echo "<a href='form_extra.php'>Voltar para o início</a>";
         }
     }
     else if($operacao == "exibir"){
@@ -156,7 +212,7 @@
             mysqli_query($mysqli,$sql);
 
             echo "Cliente atualizado com sucesso!<br>";
-            echo "<a href='form_extra.html'>Voltar para o início</a>"; 
+            echo "<a href='form_extra.php'>Voltar para o início</a>"; 
         }
     }
     else if($operacao == "excluir"){
@@ -164,7 +220,7 @@
         $sql = "DELETE FROM cliente WHERE id_cliente = $id_cliente;"; 
         mysqli_query($mysqli,$sql);
         echo "Cliente excluído com sucesso!<br>";
-        echo "<a href='form_extra.html'>Voltar para o início</a>";
+        echo "<a href='form_extra.php'>Voltar para o início</a>";
     }
 ?>
     </body>
