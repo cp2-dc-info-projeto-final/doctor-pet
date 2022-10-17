@@ -37,7 +37,7 @@ CREATE TABLE administrador (
     primary key(id_administrador)
 );
 
-    ///Senha do administrador: 11235813///
+    /Senha do administrador: 11235813/
 
 INSERT INTO `administrador` (
     `id_administrador`, `cpf`, `nome`, `email`, `nascimento`, `telefone`, `senha`)

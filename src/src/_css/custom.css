@@ -1,0 +1,5 @@
+#fundo {
+    background-image: url(../img/logo3.png);
+    background-repeat: repeat-y;
+    min-height: fit-content;
+}
