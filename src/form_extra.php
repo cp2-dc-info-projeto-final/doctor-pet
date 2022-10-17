@@ -1,4 +1,3 @@
-<?php include "tipo_usuario.php";?>
 <?php include "autentica.php";?>
 <html>
     <head>
@@ -13,7 +12,25 @@ body {
 </style>
     </head>
     <body>
-        <p><a href='logout.php'>Logout</a></p>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+ <a class="navbar-brand" href="index.php">
+ <img src="img/logo2.jpg" style="width:200px;">
+ </a>
+ <ul class="navbar-nav">
+ <li class="nav-item">
+ <a class="nav-link" href="logout.php">Logout</a>
+ </li>
+ <?php 
+    if ($_SESSION["tipo"] == "administrador") {
+    ?>
+    <li class="nav-item">
+    <a class="nav-link" href="form_extra.php">Gerenciar cadastros</a>
+    </li>
+    <?php
+    }
+    ?>
+ </ul>
+</nav>
         <h1>Cadastro de Usuário</h1>
         <form action="pagina_extra.php" method="POST">
             <input type="hidden" name="operacao" value="inserir">
@@ -42,7 +59,7 @@ body {
 
         <h1><a href='servicos/editar_servicos.php'>Gerenciar serviços</a></h1>
         <?php 
-        if (TRUE) {
+        if ($_SESSION["tipo"] == "administrador") {
         ?>
         <h1>Mostrar clientes</h1>
         <p>Clique no botão abaixo para mostrar os clientes cadastrados</p>

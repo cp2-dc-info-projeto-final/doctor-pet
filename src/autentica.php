@@ -8,5 +8,4 @@
         echo "<p><a href='login.html'>Página de login</a></p>";
         exit;
     }
-
 ?>
