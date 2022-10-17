@@ -1,3 +1,0 @@
-<?php
-$senha_cript = " "
-?>
