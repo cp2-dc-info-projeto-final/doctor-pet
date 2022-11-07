@@ -36,11 +36,13 @@ body {
             <input type="hidden" name="operacao" value="inserir">
             <p>Nome: <input type="text" name="nome"></p>
             <p>CPF: <input type="text" name="cpf"
+                maxlength='14'
                 placeholder="xxx.xxx.xxx-xx"></p>
             <p>E-mail: <input type="email" name="email"
                 placeholder="exemplo@gmail.com"
                 pattern=".+@gmail.com"></p>
                 <p>Telefone: <input type="tel" name="telefone"
+                maxlength='15'
                 placeholder="(xx) xxxxx-xxxx"
                 pattern="[(]{1}[0-9]{2}[)]{1}[ ]{1}[0-9]{5}-[0-9]{4}"></p>
             <p>Data de Nascimento: <input type="date" name="nascimento"></p>

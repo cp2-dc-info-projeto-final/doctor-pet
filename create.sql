@@ -1,8 +1,8 @@
-CREATE DATABASE ds302;
-USE ds302;
+CREATE DATABASE doctor_pet;
+USE doctor_pet;
 
 CREATE USER 'gerente'@'localhost' IDENTIFIED BY '123'; 
-GRANT ALL PRIVILEGES ON ds302.* TO 'gerente'@'localhost';
+GRANT ALL PRIVILEGES ON doctor_pet.* TO 'gerente'@'localhost';
 
 CREATE TABLE cliente ( 
     id_cliente int NOT NULL AUTO_INCREMENT,
