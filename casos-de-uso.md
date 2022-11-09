@@ -37,12 +37,17 @@ Ator
 3. Os dados são validados no Sistema Externo. 
 4. O sistema exibe que o login e senha são válidos. 
 5. O acesso ao sistema é liberado.
+6. ![image](https://user-images.githubusercontent.com/111400121/200854543-29b2e08a-56a4-4f58-9691-b045d7c6f476.png)
+
+
 
 **Fluxo Alternativo**
 
 1. Login e/ou senha inválidos.
 2. O sistema exibe que o login e/ou senha são inválidos. 
 3. O fluxo retorna ao passo 1 do fluxo principal.
+4. ![image](https://user-images.githubusercontent.com/111400121/200856487-061cb2cc-d884-4b50-a1e7-3920898c31ec.png)
+
 
 ### CDU 02 - Administrar quadro de horários
 Ator
@@ -105,7 +110,7 @@ Ator
 4. O usuário fornece os dados e confirma a operação.
 5. O sistema verifica se todos foram fornecidos.
 6. O sistema exibe uma mensagem de confirmação.
-
+7. 
 **Fluxo Alternativo A**
  
 1. O usuário seleciona a opção Excluir cliente. 
