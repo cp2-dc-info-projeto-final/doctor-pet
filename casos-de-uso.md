@@ -208,3 +208,7 @@ Ator
 **Fluxo Principal**
 -gerente comunica o sistema
 
+![image](https://user-images.githubusercontent.com/111400121/200863860-ea835e39-d017-4a84-8692-29ea22ee1cd7.png)
+
+**Fluxo Alternativo A**
+![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
