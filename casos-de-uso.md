@@ -10,6 +10,7 @@
  - [CDU 06](#CDU-06): Editar consultas 
  - [CDU 07](#CDU-07): Cadastrar dados dos clientes
  - [CDU 08](#CDU-08): Cadastrar dados dos funcionários
+ - [CDU 09](#CDU-09): Criar serviços
  
 ## Lista dos Atores
 - Gerente <br>
@@ -199,3 +200,11 @@ Ator
 2. O gerente receberá os dados do funcionário.
 3. Dados não validados pelo gerente.
 4. O funcionário deverá reenviar os seus dados para validação.
+
+### CDU 08 -Criar serviços
+Ator
+-Gerente
+
+**Fluxo Principal**
+-gerente comunica o sistema
+
