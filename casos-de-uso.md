@@ -4,13 +4,13 @@
 
  - [CDU 01](#CDU-01): Login
  - [CDU 02](#CDU-02): Administrar quadro de horários
- - [CDU 03](#CDU-03): Administrar cadastro dos funcionários
- - [CDU 04](#CDU-04): Administrar cadastro dos clientes
- - [CDU 05](#CDU-05): Agendar consultas
- - [CDU 06](#CDU-06): Editar consultas 
- - [CDU 07](#CDU-07): Cadastrar dados dos clientes
- - [CDU 08](#CDU-08): Cadastrar dados dos funcionários
- - [CDU 09](#CDU-09): Criar serviços
+ - [CDU 03](#CDU-03): Administrar cadastro dos usuários
+ - [CDU 05](#CDU-04): Agendar consultas
+ - [CDU 06](#CDU-05): Editar consultas 
+ - [CDU 07](#CDU-06): Cadastrar dados dos clientes
+ - [CDU 08](#CDU-07): Cadastrar dados dos funcionários
+ - [CDU 09](#CDU-08): Criar serviços
+ - [CDU 09](#CDU-09): solicitar serviços
  
 ## Lista dos Atores
 - Gerente <br>
