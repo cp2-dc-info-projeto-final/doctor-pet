@@ -38,7 +38,8 @@
                 $usuario = "administrador";
                 $_SESSION["tipo"] = $usuario;
                 //direciona para a página inicial
-                header("Location: confirmalogin.php");
+                header("Refresh: 5;URL=index.php");
+                echo"Seja bem vindo!";
                 }
             }
         }
@@ -56,7 +57,8 @@
             $usuario = "funcionario";
             $_SESSION["tipo"] = $usuario;
             //direciona para a página inicial
-            header("Location: confirmalogin.php");
+            header("Refresh: 5;URL=index.php");
+            echo"Seja bem vindo!";
             }
         }
 
@@ -75,7 +77,8 @@
         $usuario = "cliente";
         $_SESSION["tipo"] = $usuario;
         //direciona para a página inicial
-        header("Location: confirmalogin.php");
+        header("Refresh: 5;URL=index.php");
+        echo"Seja bem vindo!";
         }
     }
 ?>

@@ -128,7 +128,7 @@ body {
             echo "<a href='form_extra.php'>Voltar para o início</a>";
         }
     }
-    else if($operacao == "exibir"){
+    else if($operacao == "exibir_cliente"){
         $sql = "SELECT * FROM cliente;"; 
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
@@ -139,14 +139,14 @@ body {
             echo "Data de nascimento: ".$cliente["nascimento"]."<br>";
             echo "CPF: ".$cliente["cpf"]."<br>";
             echo "Telefone: ".$cliente["telefone"]."<br>";
-            echo "<a href='altera.php?id_cliente=".$cliente["id_cliente"]."'>
+            echo "<a href='altera_cliente.php?id_cliente=".$cliente["id_cliente"]."'>
             Editar cliente</a><br>";
-            echo "<a href='pagina_extra.php?operacao=excluir&id_cliente=".$cliente["id_cliente"]."'>
+            echo "<a href='pagina_extra.php?operacao=excluir_cliente&id_cliente=".$cliente["id_cliente"]."'>
             Excluir cliente</a><br>";
             echo "---------------------<br>";
         }
     }
-    else if($operacao == "buscar"){
+    else if($operacao == "buscar_cliente"){
         $nome = $_POST["nome"];
         $sql = "SELECT * FROM cliente WHERE nome like '%$nome%';"; 
         $res = mysqli_query($mysqli,$sql);
@@ -165,7 +165,7 @@ body {
             echo "---------------------<br>";
         }
     }
-    else if($operacao == "editar"){
+    else if($operacao == "editar_cliente"){
         $id_cliente = $_POST["id_cliente"];
         $nome = $_POST["nome"];
         $cpf = $_POST["cpf"];
@@ -215,11 +215,105 @@ body {
             echo "<a href='form_extra.php'>Voltar para o início</a>"; 
         }
     }
-    else if($operacao == "excluir"){
+    else if($operacao == "excluir_cliente"){
         $id_cliente = $_GET["id_cliente"];
         $sql = "DELETE FROM cliente WHERE id_cliente = $id_cliente;"; 
         mysqli_query($mysqli,$sql);
         echo "Cliente excluído com sucesso!<br>";
+        echo "<a href='form_extra.php'>Voltar para o início</a>";
+    }
+    else if($operacao == "exibir_funcionario"){
+        $sql = "SELECT * FROM funcionario;"; 
+        $res = mysqli_query($mysqli,$sql);
+        $linhas = mysqli_num_rows($res);
+        for($i = 0; $i < $linhas; $i++){
+            $funcionario = mysqli_fetch_array($res);
+            echo "Nome: ".$funcionario["nome"]."<br>";
+            echo "E-mail: ".$funcionario["email"]."<br>";
+            echo "Data de nascimento: ".$funcionario["nascimento"]."<br>";
+            echo "CPF: ".$funcionario["cpf"]."<br>";
+            echo "Telefone: ".$funcionario["telefone"]."<br>";
+            echo "<a href='altera_funcionario.php?id_funcionario=".$funcionario["id_funcionario"]."'>
+            Editar Funcionário</a><br>";
+            echo "<a href='pagina_extra.php?operacao=excluir_funcionario&id_funcionario=".$funcionario["id_funcionario"]."'>
+            Excluir funcionário</a><br>";
+            echo "---------------------<br>";
+        }
+    }
+    else if($operacao == "buscar_funcionario"){
+        $nome = $_POST["nome"];
+        $sql = "SELECT * FROM funcionario WHERE nome like '%$nome%';"; 
+        $res = mysqli_query($mysqli,$sql);
+        $linhas = mysqli_num_rows($res);
+        for($i = 0; $i < $linhas; $i++){
+            $funcionario = mysqli_fetch_array($res);
+            echo "Nome: ".$funcionario["nome"]."<br>";
+            echo "E-mail: ".$funcionario["email"]."<br>";
+            echo "Data de nascimento: ".$funcionario["nascimento"]."<br>";
+            echo "CPF: ".$funcionario["cpf"]."<br>";
+            echo "Telefone: ".$funcionario["telefone"]."<br>";
+            echo "<a href='altera_funcionario.php?id_funcionario=".$funcionario["id_funcionario"]."'>
+            Editar Funcionário</a><br>";
+            echo "<a href='pagina_extra.php?operacao=excluir_funcionario&id_funcionario=".$funcionario["id_funcionario"]."'>
+            Excluir funcionário</a><br>";
+            echo "---------------------<br>";
+        }
+    }
+    else if($operacao == "editar_funcionario"){
+        $id_funcionario = $_POST["id_funcionario"];
+        $nome = $_POST["nome"];
+        $cpf = $_POST["cpf"];
+        $email = $_POST["email"];
+        $telefone = $_POST["telefone"];
+        $nascimento = $_POST["nascimento"];
+
+        $erro = 0;
+
+        if(empty($nome) or strstr($nome, ' ') == false){
+            echo "Por favor, preencha o nome completo.<br>";
+            $erro = 1;
+        }
+
+        if(strstr ($cpf, '.','-') == false or strlen($cpf) != 14){
+            echo "Por favor, digite o CPF corretamente.<br>";
+            $erro = 1;
+        }
+
+        if(strlen($email) < 10 or strstr($email, '@') == false){
+            echo "Por favor, preencha o e-mail corretamente.<br>";
+            $erro = 1;
+        }
+
+        $sql = "SELECT * FROM funcionario WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+    
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
+            echo "<p><a href='login.html'>Página de login</a></p>";
+            $erro = 1;
+        }
+
+        if(empty($nascimento)){
+            echo "Por favor, preencha a data.<br>";
+            $erro = 1;
+        }
+
+        if($erro == 0){
+            $sql = "UPDATE funcionario SET nome = '$nome', cpf = '$cpf', email = '$email', 
+            nascimento = '$nascimento', telefone = '$telefone'";
+            $sql .= "WHERE id_funcionario = $id_funcionario;";  
+            mysqli_query($mysqli,$sql);
+
+            echo "Funcionário atualizado com sucesso!<br>";
+            echo "<a href='form_extra.php'>Voltar para o início</a>"; 
+        }
+    }
+    else if($operacao == "excluir_funcionario"){
+        $id_funcionario = $_GET["id_funcionario"];
+        $sql = "DELETE FROM funcionario WHERE id_funcionario = $id_funcionario;"; 
+        mysqli_query($mysqli,$sql);
+        echo "Funcionário excluído com sucesso!<br>";
         echo "<a href='form_extra.php'>Voltar para o início</a>";
     }
 ?>

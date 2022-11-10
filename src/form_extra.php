@@ -26,9 +26,6 @@ body {
     <li class="nav-item">
     <a class="nav-link" href="form_extra.php">Gerenciar cadastros</a>
     </li>
-    <?php
-    }
-    ?>
  </ul>
 </nav>
         <h1>Cadastro de Usuário</h1>
@@ -59,25 +56,35 @@ body {
             <p><input type="submit" value="Enviar"></p>
         </form>
 
-        <h1><a href='servicos/editar_servicos.php'>Gerenciar serviços</a></h1>
-        <?php 
-        if ($_SESSION["tipo"] == "administrador") {
-        ?>
-        <h1>Mostrar clientes</h1>
-        <p>Clique no botão abaixo para mostrar os clientes cadastrados</p>
-        <form action="pagina_extra.php" method="POST">
-            <input type="hidden" name="operacao" value="exibir">
-            <p><input type="submit" value="Mostrar clientes"></p>
-        </form>
-
-        <?php
-        }
-        ?>
         <h1>Buscar clientes</h1>
         <form action="pagina_extra.php" method="POST">
-            <input type="hidden" name="operacao" value="buscar">
+            <input type="hidden" name="operacao" value="buscar_cliente">
             <p>Nome: <input type="text" name="nome" size="10"></p>
             <p><input type="submit" value="Buscar"></p>
         </form>
+        <h1>Mostrar clientes</h1>
+        <p>Clique no botão abaixo para mostrar os clientes cadastrados</p>
+        <form action="pagina_extra.php" method="POST">
+            <input type="hidden" name="operacao" value="exibir_cliente">
+            <p><input type="submit" value="Mostrar clientes"></p>
+        </form>
+
+        <h1>Buscar funcionários</h1>
+        <form action="pagina_extra.php" method="POST">
+            <input type="hidden" name="operacao" value="buscar_funcionario">
+            <p>Nome: <input type="text" name="nome" size="10"></p>
+            <p><input type="submit" value="Buscar"></p>
+        </form>
+        <h1>Mostrar funcionários</h1>
+        <p>Clique no botão abaixo para mostrar os funcionários cadastrados</p>
+        <form action="pagina_extra.php" method="POST">
+            <input type="hidden" name="operacao" value="exibir_funcionario">
+            <p><input type="submit" value="Mostrar funcionários"></p>
+        </form>
+
+        <h1><a href='servicos/editar_servicos.php'>Gerenciar serviços</a></h1>
+        <?php
+        }
+        ?>
     </body>
 </html>
