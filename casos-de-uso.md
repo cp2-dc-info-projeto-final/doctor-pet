@@ -39,12 +39,17 @@ Ator
 4. O sistema exibe que o login e senha são válidos. 
 5. O acesso ao sistema é liberado.
 
+![Fluxo principal do login ](https://user-images.githubusercontent.com/111400121/201171669-6671bf8f-59bc-401e-a0d1-35ab5a762f33.jpg)
+
+
 **Fluxo Alternativo**
 
 1. Login e/ou senha inválidos.
 2. O sistema exibe que o login e/ou senha são inválidos. 
 3. O fluxo retorna ao passo 1 do fluxo principal.
-4.
+
+![fluxo-alternativoA-login](https://user-images.githubusercontent.com/111400121/201171890-984f30a1-8127-4395-9891-f5edc97d229f.jpg)
+
 
 
 ### CDU 02 - Administrar quadro de horários
@@ -69,7 +74,7 @@ Ator
 3. O sistema exibe uma mensagem de erro.
 3. O sistema retorna ao passo 1 do fluxo principal.
 
-### CDU 03 - Administrar cadastro dos funcionários
+### CDU 03 - Administrar cadastro dos usuário
 
 Ator
 -Gerente
@@ -82,13 +87,16 @@ Ator
 4. O usuário fornece os dados e confirma a operação.
 5. O sistema verifica se todos foram fornecidos.
 6. O sistema exibe uma mensagem de confirmação.
-![image](https://user-images.githubusercontent.com/111400121/200854543-29b2e08a-56a4-4f58-9691-b045d7c6f476.png)
+![fluxo-prinic admin-cadastro-func](https://user-images.githubusercontent.com/111400121/201172431-b8740282-5b61-4b80-9889-9b1f862f6e5d.jpg)
+
 **Fluxo Alternativo A**
  
 1. O usuário seleciona a opção Excluir Profissional. 
 2. O sistema solicita o código do profissional a ser excluído. 
 3. O usuário escolhe a opção Cancelar.
-4.  ![image](https://user-images.githubusercontent.com/111400121/200856487-061cb2cc-d884-4b50-a1e7-3920898c31ec.png)
+4. O sistema exibe uma mensagem de confirmação.
+![fluxo alternativo   A- adminastrar cadastro](https://user-images.githubusercontent.com/111400121/201172605-a369bb32-dadd-4c65-a39b-744a6cd26fec.jpg)
+
 
 **Fluxo Alternativo B**
  
@@ -96,27 +104,8 @@ Ator
 2. O sistema solicita o código do Profissional a ser alterado. 
 3. O usuário escolhe a opção Cancelar.
 
-### CDU 04 - Administrar cadastro dos clientes
 
-Ator
--Gerente
-
-**Fluxo Principal** 
-
-1. O usuário seleciona a opção cadastrar usuário no menu principal. 
-2. O usuário escolhe a opção cadastrar cliente.
-3. O sistema solicita os dados necessários para o cadastro do cliente.
-4. O usuário fornece os dados e confirma a operação.
-5. O sistema verifica se todos foram fornecidos.
-6. O sistema exibe uma mensagem de confirmação.
-7. 
-**Fluxo Alternativo A**
- 
-1. O usuário seleciona a opção Excluir cliente. 
-2. O sistema solicita o código do cliente a ser excluído. 
-3. O usuário escolhe a opção Cancelar.
-
-### CDU 05 - Agendar Consulta
+### CDU 04 - Agendar Consulta
 Ator
 -Cliente
 -Recepcionista 
@@ -142,7 +131,7 @@ Ator
 3. O usuário escolhe a opção Cancelar. 
 4. O sistema volta ao passo 4 do Fluxo Principal.
 
-### CDU 06 - Editar consultas
+### CDU 05 - Editar consultas
 Ator
 -Recepcionista
 -Veterinário
@@ -156,7 +145,7 @@ Ator
 5. O veterinário cria um relatório da consulta.
 6. O sistema adiciona o novo relatório a  ficha do cliente.
 
-### CDU 07 - Cadastrar dados do cliente
+### CDU 06 - Cadastrar dados do cliente
 Ator
 -Cliente
 -Gerente
@@ -177,7 +166,7 @@ Ator
 3. Dados não validados pelo gerente.
 4. O cliente deverá reenviar os seus dados para validação.
 
-### CDU 08 -Cadastrar dados do funcionário
+### CDU 07 -Cadastrar dados do funcionário
 Ator
 -Funcionário
 -Gerente
@@ -198,14 +187,25 @@ Ator
 3. Dados não validados pelo gerente.
 4. O funcionário deverá reenviar os seus dados para validação.
 
-### CDU 09 -Criar serviços
+### CDU 08-Criar serviços
 Ator
 -Gerente
 
 **Fluxo Principal**
--gerente comunica o sistema
+-gerente solicita 
 
 ![image](https://user-images.githubusercontent.com/111400121/200863860-ea835e39-d017-4a84-8692-29ea22ee1cd7.png)
 
 **Fluxo Alternativo A**
 ![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
+
+### CDU 09 -solicitar serviços
+Ator
+-recepcionista
+
+**Fluxo Principal**
+![image](https://user-images.githubusercontent.com/111400121/201170634-12a61513-c3ed-442f-a62e-defc20b99ce1.png)
+
+**Fluxo Alternativo A**
+![image](https://user-images.githubusercontent.com/111400121/201170754-5fc317b9-4ade-4160-9164-b5e1581e132e.png)
+
