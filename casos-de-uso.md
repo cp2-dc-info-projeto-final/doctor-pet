@@ -38,9 +38,6 @@ Ator
 3. Os dados são validados no Sistema Externo. 
 4. O sistema exibe que o login e senha são válidos. 
 5. O acesso ao sistema é liberado.
-6. 
-
-
 
 **Fluxo Alternativo**
 
@@ -201,7 +198,7 @@ Ator
 3. Dados não validados pelo gerente.
 4. O funcionário deverá reenviar os seus dados para validação.
 
-### CDU 08 -Criar serviços
+### CDU 09 -Criar serviços
 Ator
 -Gerente
 
