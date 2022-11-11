@@ -5,19 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
-        body {
-            background-color: cyan;
+    .login {
+        min-width: 300px;
+        width: 30%;
+        border: 5px outset red;
+        background-color: lightblue;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto;    
         }
+    body {
+        background-color: cyan;
+    }
+
     </style>
 </head>
     <body>
-        <h1>LOGIN</h1>
-        <form action="login.php" method="POST">
-            <p>E-mail: <input type="email" name="email"
-                placeholder="exemplo@gmail.com"
-                pattern=".+@gmail.com"></p>
-            <p>Senha: <input type="password" name="senha"></p>
-            <p><input type="submit" value="Enviar"></p>
-        </form>
+            <div class="login">
+                <h1>LOGIN</h1>
+                <form action="login.php" method="POST">
+                    <p>E-mail: <input type="email" name="email"
+                        placeholder="exemplo@gmail.com"
+                        pattern=".+@gmail.com"></p>
+                    <p>Senha: <input type="password" name="senha"></p>
+                    <p><input type="submit" value="Enviar"></p>
+                </form>
+            </div>    
     </body>
 </html>
