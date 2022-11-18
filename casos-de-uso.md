@@ -196,7 +196,7 @@ Ator
 3. O ator administrador preenche o formularuo.
 4. O sistema válida os dados do serviço.
 5. O sistema armazena os dados do serviço.
-6. O sistema envia ao a4 qpytor administrador uma mensagem de confirmação.
+6. O sistema envia ao ator administrador uma mensagem de confirmação.
 7. O caso de uso encerrado.
  ![image](https://user-images.githubusercontent.com/111400121/200863860-ea835e39-d017-4a84-8692-29ea22ee1cd7.png)
 
@@ -207,30 +207,6 @@ Ator
 3. O ator administrador não preenche adequadamente o formulário. caso de uso encerrado.
 4. caso de uso encerrado.
 ![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
-
-Atores:Administrador Fluxo principal do cadastro do serviço:
-
-3->Model->ARMAZENAR DADOS DO SERVIÇO-->Controller
-
-4->Controller->TRASMITIR->Vew
-
-5->Vew->EXIBIR MEMSAGEM( Cadastro concluído com sucesso.)
-
-Fluxo altenativo do cadastro do serviço:
-
-1->Vew-> PREENCHE OS DADOS DO SERVIÇO->Controller
-
-2->Controller->TRASMITIR->Model
-
-3->Model->
-
-**Fluxo Principal**
--gerente solicita 
-
-
-
-**Fluxo Alternativo A**
-
 
 ### CDU 09 -solicitar serviços
 Ator
