@@ -191,13 +191,46 @@ Ator
 Ator
 -Gerente
 
+1. O caso de uso inicia com o ator administrador solicitando a criação de um novo serviço.
+2. O sistema apresenta o formulário para ser preenchimento.
+3. O ator administrador preenche o formularuo.
+4. O sistema válida os dados do serviço.
+5. O sistema armazena os dados do serviço.
+6. O sistema envia ao a4 qpytor administrador uma mensagem de confirmação.
+7. O caso de uso encerrado.
+ ![image](https://user-images.githubusercontent.com/111400121/200863860-ea835e39-d017-4a84-8692-29ea22ee1cd7.png)
+
+### Fluxo alternativo de criar serviço:
+
+1. O caso de uso inicia com o ator administrador solicitando a criação de um novo serviço.
+2. O sistema apresenta o formulário para ser preenchimento.
+3. O ator administrador não preenche adequadamente o formulário. caso de uso encerrado.
+4. caso de uso encerrado.
+![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
+
+Atores:Administrador Fluxo principal do cadastro do serviço:
+
+3->Model->ARMAZENAR DADOS DO SERVIÇO-->Controller
+
+4->Controller->TRASMITIR->Vew
+
+5->Vew->EXIBIR MEMSAGEM( Cadastro concluído com sucesso.)
+
+Fluxo altenativo do cadastro do serviço:
+
+1->Vew-> PREENCHE OS DADOS DO SERVIÇO->Controller
+
+2->Controller->TRASMITIR->Model
+
+3->Model->
+
 **Fluxo Principal**
 -gerente solicita 
 
-![image](https://user-images.githubusercontent.com/111400121/200863860-ea835e39-d017-4a84-8692-29ea22ee1cd7.png)
+
 
 **Fluxo Alternativo A**
-![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
+
 
 ### CDU 09 -solicitar serviços
 Ator
