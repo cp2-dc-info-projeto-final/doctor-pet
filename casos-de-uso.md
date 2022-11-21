@@ -145,24 +145,25 @@ Ator
 5. O veterinário cria um relatório da consulta.
 6. O sistema adiciona o novo relatório a  ficha do cliente.
 
-### CDU 06 - Cadastrar dados do cliente
+### CDU 06 - Cadastrar dados do usuário
 Ator
 -Cliente
+-funcionário
 -Gerente
 -Recepcionista
 
 **Fluxo Principal**
 
-1. O cliente enviará seus dados ao sistema.
-2. O gerente receberá os dados do cliente. 
+1. O usuário enviará seus dados ao sistema.
+2. O gerente receberá os dados do usuário. 
 3. O gerente fará a validação dos dados.
 4. Após a validação, os dados serão enviados para a recepcionista.
 5. A recepcionista inserirá os dados no prontuário.
 
 **Fluxo Alternativo A**
 
-1. O cliente enviará seus dados ao sistema.
-2. O gerente receberá os dados do cliente.
+1. O usuário enviará seus dados ao sistema.
+2. O gerente receberá os dados do usuário.
 3. Dados não validados pelo gerente.
 4. O cliente deverá reenviar os seus dados para validação.
 
@@ -213,9 +214,25 @@ Ator
 -recepcionista
 
 **Fluxo Principal**
+1. O sistema exibe os serviços;
+2. O(a) recepcionista seleciona o serviço desejado;
+3. O sistema verifica se o serviço estar disponivél;
+4. O sistema confirma o agendamento.
 ![image](https://user-images.githubusercontent.com/111400121/203125957-7ef5291e-859a-4b6a-a699-cffe551448f8.png)
 
 **Fluxo Alternativo A**
+1. O sistema exibe os serviços;
+2. Nenhum serviço é solicitado;
+3. O sistema encerra a ação.
 ![image](https://user-images.githubusercontent.com/111400121/203127117-1c37a73d-cdd0-4624-af6c-19e29da0303a.png)
+
+**Fluxo Alternativo B**
+1. O sistema exibe os serviços;
+2. O(a) recepcionista seleciona o serviço desejado;
+3. O sistema verifica se o serviço estar disponivél;
+4. O sistema não encontra serviço disponivél:
+5. O sistema encerra a ação.
+![image](https://user-images.githubusercontent.com/111400121/203131896-67fdef28-c9af-484e-b887-e34e4e32982e.png)
+
 
 
