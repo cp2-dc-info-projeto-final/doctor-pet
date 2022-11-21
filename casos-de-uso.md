@@ -213,8 +213,9 @@ Ator
 -recepcionista
 
 **Fluxo Principal**
-![image](https://user-images.githubusercontent.com/111400121/201170634-12a61513-c3ed-442f-a62e-defc20b99ce1.png)
+![image](https://user-images.githubusercontent.com/111400121/203125957-7ef5291e-859a-4b6a-a699-cffe551448f8.png)
 
 **Fluxo Alternativo A**
-![image](https://user-images.githubusercontent.com/111400121/201170754-5fc317b9-4ade-4160-9164-b5e1581e132e.png)
+![image](https://user-images.githubusercontent.com/111400121/203127117-1c37a73d-cdd0-4624-af6c-19e29da0303a.png)
+
 
