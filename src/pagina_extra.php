@@ -1,4 +1,6 @@
 <?php include "conecta_mysql.inc"; ?>
+<?php include "autentica.php"; ?>
+<?php include "nav.php"; ?>
 <html>
     <head>
     <link rel="stylesheet" href="_css/bootstrap.css">

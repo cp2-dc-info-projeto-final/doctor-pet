@@ -1,7 +1,9 @@
 <?php include "autentica.php";?>
+<?php include "nav.php";?>
 <html>
     <head>
     <link rel="stylesheet" href="_css/bootstrap.css">
+    <link rel="stylesheet" href="_css/login.css">
         <title>Cadastro de Usuário</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -40,22 +42,10 @@ const phoneMask = (value) => {
 </script>
     </head>
     <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
- <a class="navbar-brand" href="index.php">
- <img src="img/logo2.jpg" style="width:200px;">
- </a>
- <ul class="navbar-nav">
- <li class="nav-item">
- <a class="nav-link" href="logout.php">Logout</a>
- </li>
- <?php 
+    <?php 
     if ($_SESSION["tipo"] == "administrador") {
     ?>
-    <li class="nav-item">
-    <a class="nav-link" href="form_extra.php">Gerenciar cadastros</a>
-    </li>
- </ul>
-</nav>
+    <div class="login">
         <h1>Cadastro de Usuário</h1>
         <form action="pagina_extra.php" method="POST">
             <input type="hidden" name="operacao" value="inserir">
@@ -124,6 +114,7 @@ const phoneMask = (value) => {
         </form>
 
         <h1><a href='servicos/editar_servicos.php'>Gerenciar serviços</a></h1>
+    </div>
         <?php
         }
         ?>

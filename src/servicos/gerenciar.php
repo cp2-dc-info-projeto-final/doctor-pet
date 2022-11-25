@@ -18,17 +18,21 @@ body {
 
     if($operacao == "inserir"){
         $nome = $_POST["nome"];
-
+        $descricao = $_POST["descricao"];
         $erro = 0;
 
         if(empty($nome)){
             echo "Por favor, preencha o nome do serviço.<br>";
             $erro = 1;
         }
+        if(empty($descricao)){
+            echo "Por favor, preencha a descrição do serviço.<br>";
+            $erro = 1;
+        }
 
         if($erro == 0){
-            $sql = "INSERT INTO servico (nome)";
-            $sql .= "VALUES ('$nome');";
+            $sql = "INSERT INTO servico (nome,descricao)";
+            $sql .= "VALUES ('$nome','$descricao');";
             mysqli_query($mysqli,$sql);
             echo "Serviço $nome registrado com sucesso!<br>";
             echo "<a href='editar_servicos.php'>Voltar para o gerenciamento de serviços</a>";
@@ -41,6 +45,7 @@ body {
         for($i = 0; $i < $linhas; $i++){
             $servico = mysqli_fetch_array($res);
             echo "Serviço: ".$servico["nome"]."<br>";
+            echo "Descrição: ".$servico["descricao"]."<br>";
             echo "<a href='gerenciar.php?operacao=excluir&id_servico=".$servico["id_servico"]."'>
             Excluir serviço</a><br>";
             echo "---------------------<br>";
@@ -54,6 +59,7 @@ body {
         for($i = 0; $i < $linhas; $i++){
             $servico = mysqli_fetch_array($res);
             echo "Serviço: ".$servico["nome"]."<br>";
+            echo "Descrição: ".$servico["descricao"]."<br>";
             echo "<a href='gerenciar.php?operacao=excluir&id_servico=".$servico["id_servico"]."'>
             Excluir serviço</a><br>";
             echo "---------------------<br>";
