@@ -111,6 +111,8 @@ Ator
 -Recepcionista 
 -Gerente
 
+![image](https://user-images.githubusercontent.com/111400121/204054517-385ba0c0-ef42-4f33-a325-9dc74274663c.png)
+
  **Fluxo principal**
 1. O usuário seleciona a opção Agendar no menu principal.
 2. O usuário escolhe a opção Agendar consulta.
