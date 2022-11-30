@@ -4,13 +4,14 @@
     <head>
     <link rel="stylesheet" href="_css/bootstrap.css">
     <link rel="stylesheet" href="_css/login.css">
+    <link rel="stylesheet" href="_css/background.css">
         <title>Cadastro de Usuário</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style>
-body {
-  background-color: cyan;
-}
+    body{
+    background-color: rgb(0,255,255, 0.30);
+    }
 </style>
 <script>
     function mascara_cpf(i){
@@ -45,7 +46,8 @@ const phoneMask = (value) => {
     <?php 
     if ($_SESSION["tipo"] == "administrador") {
     ?>
-    <div class="login">
+    <div class="hero">
+        <div class="login">
         <h1>Cadastro de Usuário</h1>
         <form action="pagina_extra.php" method="POST">
             <input type="hidden" name="operacao" value="inserir">
@@ -114,6 +116,7 @@ const phoneMask = (value) => {
         </form>
 
         <h1><a href='servicos/editar_servicos.php'>Gerenciar serviços</a></h1>
+    </div>
     </div>
         <?php
         }
