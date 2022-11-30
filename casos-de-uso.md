@@ -190,7 +190,7 @@ Ator
 3. Dados não validados pelo gerente.
 4. O funcionário deverá reenviar os seus dados para validação.
 
-### CDU 08-Criar serviços
+### CDU 08-Criar serviço
 Ator
 -Gerente
 
@@ -211,7 +211,7 @@ Ator
 4. caso de uso encerrado.
 ![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
 
-### CDU 09 -solicitar serviços
+### CDU 09 -solicitar exames
 Ator
 -recepcionista
 
