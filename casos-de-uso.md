@@ -139,7 +139,7 @@ Ator
 3. O sistema solicita que o usuário preencha os campos corretamente.
 4. O sistema volta ao passo 3 do Fluxo Principal.
  
-### CDU 05 - Editar consultas
+### CDU 05 - Editar serviço
 Ator
 -Recepcionista
 -Veterinário
