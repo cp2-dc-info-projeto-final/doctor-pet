@@ -13,7 +13,7 @@
  - [CDU 09](#CDU-09): solicitar serviços
  
 ## Lista dos Atores
-- Gerente <br>
+- administrador <br>
 - Funcionário <br>
 - Veterinário <br>
 - Recepcionista <br>
@@ -27,7 +27,7 @@
 
 ### CDU 01 - Login
 Ator
--Gerente
+-administrador
 -Funcionário
 -Cliente 
 
@@ -54,7 +54,7 @@ Ator
 
 ### CDU 02 - Administrar quadro de horários
 Ator
--gerente
+-administrador
 -recepcionista
 -Veterinário
 
@@ -77,12 +77,12 @@ Ator
 ### CDU 03 - Administrar cadastro dos usuário
 
 Ator
--Gerente
+-administrador
 
 **Fluxo Principal** 
 
-1. O usuário seleciona a opção cadastrar usuário no menu principal. 
-2. O usuário escolhe a opção cadastrar Profissional.
+1. O administrador seleciona a opção cadastrar usuário no menu principal. 
+2. O administrador escolhe a opção cadastrar Profissional.
 3. O sistema solicita os dados necessários para o cadastro do Profissional.
 4. O usuário fornece os dados e confirma a operação.
 5. O sistema verifica se todos foram fornecidos.
@@ -109,7 +109,7 @@ Ator
 Ator
 -Cliente
 -Recepcionista 
--Gerente
+-administrador
 
  **Fluxo principal**
 1. O usuário seleciona a opção Agendar no menu principal.
@@ -157,48 +157,48 @@ Ator
 Ator
 -Cliente
 -funcionário
--Gerente
+-administrador
 -Recepcionista
 
 **Fluxo Principal**
 
 1. O usuário enviará seus dados ao sistema.
-2. O gerente receberá os dados do usuário. 
-3. O gerente fará a validação dos dados.
+2. O administrador receberá os dados do usuário. 
+3. O administrador fará a validação dos dados.
 4. Após a validação, os dados serão enviados para a recepcionista.
 5. A recepcionista inserirá os dados no prontuário.
 
 **Fluxo Alternativo A**
 
 1. O usuário enviará seus dados ao sistema.
-2. O gerente receberá os dados do usuário.
+2. O administrador receberá os dados do usuário.
 3. Dados não validados pelo gerente.
 4. O cliente deverá reenviar os seus dados para validação.
 
 ### CDU 07 -Cadastrar dados do funcionário
 Ator
 -Funcionário
--Gerente
+-administrador
 -Recepcionista
 
 **Fluxo Principal**
 
 1. O funcionário enviará seus dados ao sistema.
-2. O gerente receberá os dados do funcionário. 
-3. O gerente fará a validação dos dados.
+2. O administrador receberá os dados do funcionário. 
+3. O administrador fará a validação dos dados.
 4. Após a validação, os dados serão enviados para a recepcionista.
 5. A recepcionista inserirá os dados no prontuário.
 
 **Fluxo Alternativo A**
 
 1. O funcionário enviará seus dados ao sistema.
-2. O gerente receberá os dados do funcionário.
-3. Dados não validados pelo gerente.
+2. O administrador receberá os dados do funcionário.
+3. Dados não validados pelo administrador.
 4. O funcionário deverá reenviar os seus dados para validação.
 
 ### CDU 08-Criar serviço
 Ator
--Gerente
+-administrador
 
 1. O caso de uso inicia com o ator administrador solicitando a criação de um novo serviço.
 2. O sistema apresenta o formulário para ser preenchimento.
