@@ -1,20 +1,20 @@
 <?php include "autentica.php";?>
-<?php include "nav.php";?>
 <html>
     <head>
-        <link rel="stylesheet" href="_css/bootstrap.css">
         <link rel="stylesheet" href="_css/custom.css">
         <link rel="stylesheet" href="_css/background.css">
+        <link rel="stylesheet" href="_css/sla.css">
         <title>Doctor Pet</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style>
-    body{
+                body{
     background-color: rgb(0,255,255, 0.30);
     }
         </style>
     </head>
 <body>
+    <?php include "nav.html";?>
     <div class="hero">
 </div>
 </body>

@@ -1,7 +1,8 @@
 <?php include "autentica.php";?>
-<?php include "nav.php";?>
+
 <html>
     <head>
+    <link rel="stylesheet" href="_css/sla.css">
     <link rel="stylesheet" href="_css/bootstrap.css">
     <link rel="stylesheet" href="_css/login.css">
     <link rel="stylesheet" href="_css/background.css">
@@ -43,6 +44,7 @@ const phoneMask = (value) => {
 </script>
     </head>
     <body>
+        <?php include "nav2.php";?>
     <?php 
     if ($_SESSION["tipo"] == "administrador") {
     ?>
