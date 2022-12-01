@@ -186,7 +186,7 @@ Ator
 1. O funcionário enviará seus dados ao sistema.
 2. O administrador receberá os dados do funcionário. 
 3. O administrador fará a validação dos dados.
-4. Após a validação, os dados serão enviados para a recepcionista.
+4. Após a validação, o sistema enviará os dados para a recepcionista.
 5. A recepcionista inserirá os dados no prontuário.
 
 **Fluxo Alternativo A**
