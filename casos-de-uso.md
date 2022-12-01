@@ -175,7 +175,7 @@ Ator
 4. caso de uso encerrado.
 ![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
 
-### CDU 09 -solicitar exames
+### CDU 09 -solicitar serviço
 Ator
 -recepcionista
 
