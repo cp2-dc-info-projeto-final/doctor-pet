@@ -132,12 +132,15 @@ Ator
 2. O sistema solicita os dados para a alteração dos agendamento. 
 3. O usuário escolhe a opção Editar. 
 4. O sistema volta ao passo 4 do Fluxo Principal.
+![image](https://user-images.githubusercontent.com/111400121/206534271-197133fe-4c63-4ea3-80fa-ccc34d3021d0.png)
+
 
 **Fluxo Alternativo c**
 1. O usuário seleciona a opção Agendar no menu principal.
 2. O usuário digita os dados incorretamente.
 3. O sistema solicita que o usuário preencha os campos corretamente.
 4. O sistema volta ao passo 3 do Fluxo Principal.
+![image](https://user-images.githubusercontent.com/111400121/206539112-4d46892b-d342-4a8b-99b6-602fa700f16b.png)
 
 
 ### CDU 05-Criar serviço
