@@ -5,13 +5,12 @@
  - [CDU 01](#CDU-01): Login
  - [CDU 02](#CDU-02): Administrar quadro de horários
  - [CDU 03](#CDU-03): Administrar cadastro dos usuários
- - [CDU 04](#CDU-04): Agendar consultas
- - [CDU 05](#CDU-05): Editar consultas 
- - [CDU 06](#CDU-06): Cadastrar dados dos clientes
- - [CDU 07](#CDU-07): Cadastrar dados dos funcionários
- - [CDU 08](#CDU-08): Criar serviços
- - [CDU 09](#CDU-09): solicitar serviços
- 
+ - [CDU 05](#CDU-04): Agendar consultas
+ - [CDU 06](#CDU-07): Criar serviços
+ - [CDU 07](#CDU-08): solicitar serviços
+ - [CDU 08](#CDU-05): Cadastrar dados dos clientes
+ - [CDU 09](#CDU-06): Cadastrar dados dos funcionários
+
 ## Lista dos Atores
 - administrador <br>
 - Funcionário <br>
@@ -139,23 +138,9 @@ Ator
 2. O usuário digita os dados incorretamente.
 3. O sistema solicita que o usuário preencha os campos corretamente.
 4. O sistema volta ao passo 3 do Fluxo Principal.
- 
-### CDU 05 - Editar serviço
-Ator
--Recepcionista
--Veterinário
-
-**Fluxo principal**
-
-1. O recepcionista digita os dados do cliente no sistema.
-2. O sistema confirma a consulta do cliente.
-3. O sistema envia a ficha do cliente ao veterinário.
-4. O veterinário abre a ficha do cliente.
-5. O veterinário cria um relatório da consulta.
-6. O sistema adiciona o novo relatório a  ficha do cliente.
 
 
-### CDU 08-Criar serviço
+### CDU 05-Criar serviço
 Ator
 -administrador
 
@@ -176,7 +161,7 @@ Ator
 4. caso de uso encerrado.
 ![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
 
-### CDU 09 -solicitar serviço
+### CDU 06 -solicitar serviço
 Ator
 -recepcionista
 
@@ -200,6 +185,16 @@ Ator
 4. O sistema não encontra serviço disponivél:
 5. O sistema encerra a ação.
 ![image](https://user-images.githubusercontent.com/111400121/203131896-67fdef28-c9af-484e-b887-e34e4e32982e.png)
+
+### CDU 07 - cadastrar dados do cliente
+Ator
+-administrador
+
+**Fluxo Principal**
+1. O usuário preenche os dados do pet
+2. O(a) recepcionista seleciona o serviço desejado;
+3. O sistema verifica se o serviço estar disponivél;
+4. O sistema confirma o agendamento.
 
 
 
