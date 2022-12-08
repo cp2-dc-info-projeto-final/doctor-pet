@@ -6,10 +6,10 @@
  - [CDU 02](#CDU-02): Administrar quadro de horários
  - [CDU 03](#CDU-03): Administrar cadastro dos usuários
  - [CDU 05](#CDU-04): Agendar consultas
- - [CDU 06](#CDU-07): Criar serviços
- - [CDU 07](#CDU-08): solicitar serviços
- - [CDU 08](#CDU-05): Cadastrar dados dos clientes
- - [CDU 09](#CDU-06): Cadastrar dados dos funcionários
+ - [CDU 06](#CDU-05): Criar serviços
+ - [CDU 07](#CDU-06): solicitar serviços
+ - [CDU 08](#CDU-07): Cadastrar dados dos clientes
+ - [CDU 09](#CDU-08): Cadastrar dados dos funcionários
 
 ## Lista dos Atores
 - administrador <br>
