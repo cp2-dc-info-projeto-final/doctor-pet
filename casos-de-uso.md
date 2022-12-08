@@ -114,10 +114,11 @@ Ator
  **Fluxo principal**
 1. O usuário seleciona a opção Agendar no menu principal.
 2. O usuário escolhe a opção Agendar consulta.
-3. O sistema solicita os dados necessários para o agendamento do cliente. 
-4. O usuário fornece os dados e confirma a operação.
-5. O sistema verifica se todos os dados foram fornecidos.
-6. O sistema exibe uma mensagem de confirmação. 
+3. O sistema exibe o dia e o horario disponivel.
+4. O usuário seleciona o dia e o horario desejado.
+5. O usuário fornece os dados e confirma a operação.
+6. O sistema verifica se todos os dados foram fornecidos.
+7. O sistema exibe uma mensagem de confirmação. 
 
 ![image](https://user-images.githubusercontent.com/111400121/204054517-385ba0c0-ef42-4f33-a325-9dc74274663c.png)
 
