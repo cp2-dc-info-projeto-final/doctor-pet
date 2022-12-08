@@ -126,6 +126,8 @@ Ator
 2. O sistema solicita o código do agendamento a ser excluído. 
 3. O usuário escolhe a opção Cancelar. 
 4. O sistema volta ao passo 5 do Fluxo Principal.
+![image](https://user-images.githubusercontent.com/111608418/206539554-8e30512b-17b3-4dfc-a13d-37b332c8a130.png)
+
 
 **Fluxo Alternativo B**
 1. O usuário escolhe a opção Editar Agendamento. 
