@@ -1,6 +1,6 @@
 <?php include "conecta_mysql.inc"; ?>
 <?php include "autentica.php"; ?>
-
+<?php include "nav.php"; ?>
 <html>
     <head>
     <link rel="stylesheet" href="_css/bootstrap.css">
@@ -13,7 +13,6 @@ body {
 </style>
     </head>
     <body>
-    <?php include "nav.php"; ?>
         <h1>Dados Cadastrados</h1>
 <?php
     $operacao = $_REQUEST["operacao"];
@@ -170,39 +169,21 @@ body {
     }
     else if($operacao == "editar_cliente"){
         $id_cliente = $_POST["id_cliente"];
+        $nome = $_POST["nome"];
+        $cpf = $_POST["cpf"];
         $email = $_POST["email"];
+        $telefone = $_POST["telefone"];
         $nascimento = $_POST["nascimento"];
 
         $erro = 0;
 
-        $sql = "SELECT * FROM cliente WHERE email = '$email' AND id_cliente <> '$id_cliente';";
-        $res = mysqli_query($mysqli, $sql);
-    
-        //Testa se já existe o e-mail cadastrado
-        if(mysqli_num_rows($res) == 1){
-            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
-            $erro = 1;
-            }
-
-
-        $sql = "SELECT * FROM funcionario WHERE email = '$email';";
-        $res = mysqli_query($mysqli, $sql);
-    
-        //Testa se já existe o e-mail cadastrado
-        if(mysqli_num_rows($res) == 1){
-            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+        if(empty($nome) or strstr($nome, ' ') == false){
+            echo "Por favor, preencha o nome completo.<br>";
             $erro = 1;
         }
 
-        $sql = "SELECT * FROM administrador WHERE email = '$email';";
-        $res = mysqli_query($mysqli, $sql);
-    
-        //Testa se já existe o e-mail cadastrado
-        if(mysqli_num_rows($res) == 1){
-            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+        if(strstr ($cpf, '.','-') == false or strlen($cpf) != 14){
+            echo "Por favor, digite o CPF corretamente.<br>";
             $erro = 1;
         }
 
@@ -211,8 +192,24 @@ body {
             $erro = 1;
         }
 
+        $sql = "SELECT * FROM cliente WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+    
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
+            echo "<p><a href='login.html'>Página de login</a></p>";
+            $erro = 1;
+        }
+
+        if(empty($nascimento)){
+            echo "Por favor, preencha a data.<br>";
+            $erro = 1;
+        }
+
         if($erro == 0){
-            $sql = "UPDATE cliente SET email = '$email', telefone = '$telefone'";
+            $sql = "UPDATE cliente SET nome = '$nome', cpf = '$cpf', email = '$email', 
+            nascimento = '$nascimento', telefone = '$telefone'";
             $sql .= "WHERE id_cliente = $id_cliente;";  
             mysqli_query($mysqli,$sql);
 

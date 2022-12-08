@@ -14,7 +14,7 @@
         </style>
     </head>
 <body>
-    <?php include "nav.html";?>
+    <?php include "nav.php";?>
     <div class="hero">
 </div>
 </body>
