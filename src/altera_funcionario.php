@@ -1,7 +1,6 @@
 <?php 
     include "conecta_mysql.inc";
     include "autentica.php";
-    include "nav.php";
     $id_funcionario = $_GET["id_funcionario"];
     $sql = "SELECT * FROM funcionario WHERE id_funcionario = $id_funcionario;"; 
     $res = mysqli_query($mysqli,$sql);
@@ -9,15 +8,17 @@
 ?>
 <html>
     <head>
-        <link rel="stylesheet" href="_css/bootstrap.css">
+    <link rel="stylesheet" href="_css/custom.css">
+    <link rel="stylesheet" href="_css/background.css">
+    <link rel="stylesheet" href="_css/sla.css">
         <link rel="stylesheet" href="_css/login.css">
         <title>Edição de Usuário</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <style>
-body {
-  background-color: cyan;
-}
+                body{
+    background-color: rgb(0,255,255, 0.30);
+    }   
 </style>
 <script>
     function mascara_cpf(i){
@@ -49,6 +50,8 @@ const phoneMask = (value) => {
 </script>
     </head>
     <body>
+    <?php include "nav.php";?>
+    <div class="hero">
     <div class="login">
         <h1>Edição de Usuário</h1>
         <form action="pagina_extra.php" method="POST">
@@ -69,5 +72,6 @@ const phoneMask = (value) => {
             <p><input type="submit" value="Enviar"></p>
         </form>
     </div>
+</div>
     </body>
 </html>

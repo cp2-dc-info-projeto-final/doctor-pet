@@ -3,17 +3,20 @@
 
 <html>
     <head>
-    <link rel="stylesheet" href="_css/bootstrap.css">
+    <link rel="stylesheet" href="_css/custom.css">
+    <link rel="stylesheet" href="_css/background.css">
+    <link rel="stylesheet" href="_css/sla.css">
         <title>Dados Cadastrados</title>
         <meta charset="UTF-8">
         <style>
-body {
-  background-color: cyan;
-}
+                body{
+    background-color: rgb(0,255,255, 0.30);
+    }
 </style>
     </head>
     <body>
     <?php include "nav.php"; ?>
+    <div class="login">
         <h1>Dados Cadastrados</h1>
 <?php
     $operacao = $_REQUEST["operacao"];
@@ -51,7 +54,7 @@ body {
         //Testa se já existe o e-mail cadastrado
         if(mysqli_num_rows($res) == 1){
             echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
-            echo "<a href='form_extra.php'>Voltar para o início</a>";
+            echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
             $erro = 1;
             $sql = "SELECT * FROM funcionario WHERE email = '$email';";
             $res = mysqli_query($mysqli, $sql);
@@ -59,7 +62,7 @@ body {
             //Testa se já existe o e-mail cadastrado
             if(mysqli_num_rows($res) == 1){
                 echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
-                echo "<a href='form_extra.php'>Voltar para o início</a>";
+                echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
                 $erro = 1;
                 $sql = "SELECT * FROM administrador WHERE email = '$email';";
                 $res = mysqli_query($mysqli, $sql);
@@ -67,11 +70,14 @@ body {
                 //Testa se já existe o e-mail cadastrado
                 if(mysqli_num_rows($res) == 1){
                     echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
-                    echo "<a href='form_extra.php'>Voltar para o início</a>";
+                    echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
                     $erro = 1;
                 }
             }
         }
+
+        $sql = "SELECT * FROM cliente WHERE telefone = '$telefone';";
+        $res = mysqli_query($mysqli, $sql);
         
         if(strlen($senha) < 5 or strlen($senha) >10){
             echo "Por favor, digite a senha entre 5 e 10 caracteres.<br>";
@@ -104,7 +110,7 @@ body {
             echo "E-mail: $email <br>";
             echo "Telefone: $telefone <br>";
             echo "Data de nascimento: $nascimento <br>";
-            echo "<a href='form_extra.php'>Voltar para o início</a>";
+            echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
         }
         else if($erro == 0 AND $tipo_usuario == 'funcionario'){
             $senha_cript = password_hash($senha, PASSWORD_DEFAULT);
@@ -116,7 +122,7 @@ body {
             echo "E-mail: $email <br>";
             echo "Telefone: $telefone <br>";
             echo "Data de nascimento: $nascimento <br>";
-            echo "<a href='form_extra.php'>Voltar para o início</a>";
+            echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
         }
         else if($erro == 0 AND $tipo_usuario == 'administrador'){
             $senha_cript = password_hash($senha, PASSWORD_DEFAULT);
@@ -128,7 +134,7 @@ body {
             echo "E-mail: $email <br>";
             echo "Telefone: $telefone <br>";
             echo "Data de nascimento: $nascimento <br>";
-            echo "<a href='form_extra.php'>Voltar para o início</a>";
+            echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
         }
     }
     else if($operacao == "exibir_cliente"){
@@ -161,7 +167,7 @@ body {
             echo "Data de nascimento: ".$cliente["nascimento"]."<br>";
             echo "CPF: ".$cliente["cpf"]."<br>";
             echo "Telefone: ".$cliente["telefone"]."<br>";
-            echo "<a href='altera.php?id_cliente=".$cliente["id_cliente"]."'>
+            echo "<a href='altera_cliente.php?id_cliente=".$cliente["id_cliente"]."'>
             Editar cliente</a><br>";
             echo "<a href='pagina_extra.php?operacao=excluir&id_cliente=".$cliente["id_cliente"]."'>
             Excluir cliente</a><br>";
@@ -170,18 +176,31 @@ body {
     }
     else if($operacao == "editar_cliente"){
         $id_cliente = $_POST["id_cliente"];
+        $nome = $_POST["nome"];
+        $cpf = $_POST["cpf"];
         $email = $_POST["email"];
+        $telefone = $_POST["telefone"];
         $nascimento = $_POST["nascimento"];
 
         $erro = 0;
 
-        $sql = "SELECT * FROM cliente WHERE email = '$email' AND id_cliente <> '$id_cliente';";
+        if(empty($nome) or strstr($nome, ' ') == false){
+            echo "Por favor, preencha o nome completo.<br>";
+            $erro = 1;
+        }
+
+        if(strstr ($cpf, '.','-') == false or strlen($cpf) != 14){
+            echo "Por favor, digite o CPF corretamente.<br>";
+            $erro = 1;
+        }
+
+        $sql = "SELECT * FROM cliente WHERE email = '$email' AND id_cliente != '$id_cliente';";
         $res = mysqli_query($mysqli, $sql);
     
         //Testa se já existe o e-mail cadastrado
         if(mysqli_num_rows($res) == 1){
             echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+            echo "<a href='gerenciar_clientes.php'>Voltar para o início</a>"; 
             $erro = 1;
             }
 
@@ -192,7 +211,7 @@ body {
         //Testa se já existe o e-mail cadastrado
         if(mysqli_num_rows($res) == 1){
             echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+            echo "<a href='gerenciar_clientes.php'>Voltar para o início</a>"; 
             $erro = 1;
         }
 
@@ -202,7 +221,7 @@ body {
         //Testa se já existe o e-mail cadastrado
         if(mysqli_num_rows($res) == 1){
             echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+            echo "<a href='gerenciar_clientes.php'>Voltar para o início</a>"; 
             $erro = 1;
         }
 
@@ -211,13 +230,19 @@ body {
             $erro = 1;
         }
 
+        if(empty($nascimento)){
+            echo "Por favor, preencha a data.<br>";
+            $erro = 1;
+        }
+
         if($erro == 0){
-            $sql = "UPDATE cliente SET email = '$email', telefone = '$telefone'";
+            $sql = "UPDATE cliente SET nome = '$nome', cpf = '$cpf', email = '$email', 
+            nascimento = '$nascimento', telefone = '$telefone'";
             $sql .= "WHERE id_cliente = $id_cliente;";  
             mysqli_query($mysqli,$sql);
 
             echo "Cliente atualizado com sucesso!<br>";
-            echo "<a href='form_extra.php'>Voltar para o início</a>"; 
+            echo "<a href='gerenciar_clientes.php'>Voltar para o início</a>"; 
         }
     }
     else if($operacao == "excluir_cliente"){
@@ -225,7 +250,7 @@ body {
         $sql = "DELETE FROM cliente WHERE id_cliente = $id_cliente;"; 
         mysqli_query($mysqli,$sql);
         echo "Cliente excluído com sucesso!<br>";
-        echo "<a href='form_extra.php'>Voltar para o início</a>";
+        echo "<a href='gerenciar_clientes.php'>Voltar para o início</a>";
     }
     else if($operacao == "exibir_funcionario"){
         $sql = "SELECT * FROM funcionario;"; 
@@ -284,18 +309,39 @@ body {
             $erro = 1;
         }
 
-        if(strlen($email) < 10 or strstr($email, '@') == false){
-            echo "Por favor, preencha o e-mail corretamente.<br>";
-            $erro = 1;
-        }
-
-        $sql = "SELECT * FROM funcionario WHERE email = '$email';";
+        $sql = "SELECT * FROM funcionario WHERE email = '$email' AND id_funcionario != '$id_funcionario';";
         $res = mysqli_query($mysqli, $sql);
     
         //Testa se já existe o e-mail cadastrado
         if(mysqli_num_rows($res) == 1){
             echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+            echo "<a href='gerenciar_funcionarios.php'>Voltar para o início</a>"; 
+            $erro = 1;
+            }
+
+
+        $sql = "SELECT * FROM cliente WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+    
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
+            echo "<a href='gerenciar_funcionarios.php'>Voltar para o início</a>"; 
+            $erro = 1;
+        }
+
+        $sql = "SELECT * FROM administrador WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+    
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
+            echo "<a href='gerenciar_funcionarios.php'>Voltar para o início</a>"; 
+            $erro = 1;
+        }
+
+        if(strlen($email) < 10 or strstr($email, '@') == false){
+            echo "Por favor, preencha o e-mail corretamente.<br>";
             $erro = 1;
         }
 
@@ -311,7 +357,7 @@ body {
             mysqli_query($mysqli,$sql);
 
             echo "Funcionário atualizado com sucesso!<br>";
-            echo "<a href='form_extra.php'>Voltar para o início</a>"; 
+            echo "<a href='gerenciar_funcionarios.php'>Voltar para o início</a>"; 
         }
     }
     else if($operacao == "excluir_funcionario"){
@@ -319,7 +365,7 @@ body {
         $sql = "DELETE FROM funcionario WHERE id_funcionario = $id_funcionario;"; 
         mysqli_query($mysqli,$sql);
         echo "Funcionário excluído com sucesso!<br>";
-        echo "<a href='form_extra.php'>Voltar para o início</a>";
+        echo "<a href='gerenciar_funcionario.php'>Voltar para o início</a>";
     }
     else if($operacao == "exibir_administrador"){
         $sql = "SELECT * FROM administrador;"; 
@@ -351,7 +397,7 @@ body {
             echo "Data de nascimento: ".$administrador["nascimento"]."<br>";
             echo "CPF: ".$administrador["cpf"]."<br>";
             echo "Telefone: ".$administrador["telefone"]."<br>";
-            echo "<a href='altera.php?id_administrador=".$administrador["id_administrador"]."'>
+            echo "<a href='altera_administrador.php?id_administrador=".$administrador["id_administrador"]."'>
             Editar administrador</a><br>";
             echo "<a href='pagina_extra.php?operacao=excluir&id_administrador=".$administrador["id_administrador"]."'>
             Excluir administrador</a><br>";
@@ -378,18 +424,39 @@ body {
             $erro = 1;
         }
 
-        if(strlen($email) < 10 or strstr($email, '@') == false){
-            echo "Por favor, preencha o e-mail corretamente.<br>";
-            $erro = 1;
-        }
-
-        $sql = "SELECT * FROM administrador WHERE email = '$email';";
+        $sql = "SELECT * FROM administrador WHERE email = '$email' AND id_administrador != '$id_administrador';";
         $res = mysqli_query($mysqli, $sql);
     
         //Testa se já existe o e-mail cadastrado
         if(mysqli_num_rows($res) == 1){
             echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
-            echo "<p><a href='login.html'>Página de login</a></p>";
+            echo "<a href='gerenciar_administradores.php'>Voltar para o início</a>"; 
+            $erro = 1;
+            }
+
+
+        $sql = "SELECT * FROM cliente WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+    
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
+            echo "<a href='gerenciar_funcionarios.php'>Voltar para o início</a>"; 
+            $erro = 1;
+        }
+
+        $sql = "SELECT * FROM funcionario WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+    
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.";
+            echo "<a href='gerenciar_funcionarios.php'>Voltar para o início</a>"; 
+            $erro = 1;
+        }
+
+        if(strlen($email) < 10 or strstr($email, '@') == false){
+            echo "Por favor, preencha o e-mail corretamente.<br>";
             $erro = 1;
         }
 
@@ -405,7 +472,7 @@ body {
             mysqli_query($mysqli,$sql);
 
             echo "Administrador atualizado com sucesso!<br>";
-            echo "<a href='form_extra.php'>Voltar para o início</a>"; 
+            echo "<a href='gerenciar_administradores.php'>Voltar para o início</a>"; 
         }
     }
     else if($operacao == "excluir_administrador"){
@@ -413,9 +480,11 @@ body {
         $sql = "DELETE FROM administrador WHERE id_administrador = $id_administrador;"; 
         mysqli_query($mysqli,$sql);
         echo "Administrador excluído com sucesso!<br>";
-        echo "<a href='form_extra.php'>Voltar para o início</a>";
+        echo "<a href='gerenciar_administradores.php'>Voltar para o início</a>";
     }    
 ?>
+</div>
+
     </body>
 </html>
 <?php mysqli_close($mysqli); ?>
