@@ -50,7 +50,7 @@ const phoneMask = (value) => {
 </script>
     </head>
     <body>
-        <?php     include "nav.php";?>
+        <?php include "nav.php";?>
         <div class="hero">
     <div class="login">
         <h1>Edição de Usuário</h1>

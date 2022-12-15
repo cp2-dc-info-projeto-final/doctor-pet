@@ -2,7 +2,21 @@
     <a href="index.php">
         <img src="img/logo2.jpg" style="width:200px;">
         </a>
-  <a href="#news">News</a>
+        <?php 
+    if ($_SESSION["tipo"] == "cliente") {
+    ?>
+  <nav class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Consultas
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <nav class="dropdown-content" id="myDropdown">
+    <a href="agendar_consulta.php">Agendar consultas</a>
+    <a href="gerenciar_consulta.php">Gerenciar consultas</a>
+  </nav>
+  </nav>
+  <?php
+    }
+    ?>
   <?php 
     if ($_SESSION["tipo"] == "administrador") {
     ?>

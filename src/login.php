@@ -37,6 +37,7 @@
                 $_SESSION["email"] = $email;
                 $usuario = "administrador";
                 $_SESSION["tipo"] = $usuario;
+                $_SESSION["id"] = $cliente['id_administrador'];
                 //direciona para a página inicial
                 header("Refresh: 5;URL=index.php");
                 echo"Seja bem vindo!";
@@ -56,6 +57,7 @@
             $_SESSION["email"] = $email;
             $usuario = "funcionario";
             $_SESSION["tipo"] = $usuario;
+            $_SESSION["id"] = $cliente['id_funcionario'];
             //direciona para a página inicial
             header("Refresh: 5;URL=index.php");
             echo"Seja bem vindo!";
@@ -76,6 +78,7 @@
         $_SESSION["email"] = $email;
         $usuario = "cliente";
         $_SESSION["tipo"] = $usuario;
+        $_SESSION["id"] = $cliente['id_cliente'];
         //direciona para a página inicial
         header("Refresh: 5;URL=index.php");
         echo"Seja bem vindo!";
