@@ -54,6 +54,8 @@ body {
             $servico = mysqli_fetch_array($res);
             echo "Serviço: ".$servico["nome"]."<br>";
             echo "Descrição: ".$servico["descricao"]."<br>";
+            echo "<a href='disponibilizar_horarios.php?operacao=disponibilizar&id_servico=".$servico["id_servico"]."'>
+            Disponibilizar horário</a><br>";
             echo "<a href='gerenciar_servicos.php?operacao=excluir&id_servico=".$servico["id_servico"]."'>
             Excluir serviço</a><br>";
             echo "---------------------<br>";
@@ -68,6 +70,8 @@ body {
             $servico = mysqli_fetch_array($res);
             echo "Serviço: ".$servico["nome"]."<br>";
             echo "Descrição: ".$servico["descricao"]."<br>";
+            echo "<a href='disponibilizar_horarios.php?operacao=disponibilizar&id_servico=".$servico["id_servico"]."'>
+            Disponibilizar horário</a><br>";
             echo "<a href='gerenciar_servicos.php?operacao=excluir&id_servico=".$servico["id_servico"]."'>
             Excluir serviço</a><br>";
             echo "---------------------<br>";

@@ -11,7 +11,7 @@
   </button>
   <nav class="dropdown-content" id="myDropdown">
     <a href="agendar_consulta.php">Agendar consultas</a>
-    <a href="gerenciar_consulta.php">Gerenciar consultas</a>
+    <a href="exibir_consulta.php">Exibir consultas marcadas</a>
   </nav>
   </nav>
   <?php
@@ -25,11 +25,13 @@
     <i class="fa fa-caret-down"></i>
   </button>
   <nav class="dropdown-content" id="myDropdown">
+    
     <a href="cadastro_usuario.php">Cadastrar usuários</a>
     <a href="gerenciar_clientes.php">Gerenciar clientes</a>
     <a href="gerenciar_funcionarios.php">Gerenciar funcionários</a>
     <a href="gerenciar_administradores.php">Gerenciar administradores</a>
     <a href="editar_servicos.php">Gerenciar serviços</a>
+    <a href="disponibilizar_horarios.php">Disponibilizar horários</a>
   </nav>
   </nav>
   <?php

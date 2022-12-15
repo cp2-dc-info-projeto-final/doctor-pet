@@ -56,25 +56,29 @@
             echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
             echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
             $erro = 1;
-            $sql = "SELECT * FROM funcionario WHERE email = '$email';";
-            $res = mysqli_query($mysqli, $sql);
-        
-            //Testa se já existe o e-mail cadastrado
-            if(mysqli_num_rows($res) == 1){
-                echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
-                echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
-                $erro = 1;
-                $sql = "SELECT * FROM administrador WHERE email = '$email';";
-                $res = mysqli_query($mysqli, $sql);
-            
-                //Testa se já existe o e-mail cadastrado
-                if(mysqli_num_rows($res) == 1){
-                    echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
-                    echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
-                    $erro = 1;
-                }
-            }
         }
+
+        $sql = "SELECT * FROM funcionario WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+        
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
+            echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
+            $erro = 1;
+        }
+            
+        $sql = "SELECT * FROM administrador WHERE email = '$email';";
+        $res = mysqli_query($mysqli, $sql);
+            
+        //Testa se já existe o e-mail cadastrado
+        if(mysqli_num_rows($res) == 1){
+            echo "E-mail já cadastrado. Por favor, digite outro e-mail.<br>";
+            echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
+            $erro = 1;
+        }
+            
+
 
         $sql = "SELECT * FROM cliente WHERE telefone = '$telefone';";
         $res = mysqli_query($mysqli, $sql);

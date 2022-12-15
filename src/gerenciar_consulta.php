@@ -29,12 +29,41 @@
     if($operacao == "adicionar_consulta"){
         $id_cliente = $_SESSION["id"];
         $id_servico = $_GET["id_servico"];
-        $sql = "INSERT INTO item_servico (id_agendamento,id_servico)";
-        $sql .= "VALUES ('$id_cliente','$id_servico');";
-        mysqli_query($mysqli,$sql);
+        $_SESSION["id_servico"] = $id_servico;
+        $sql = "SELECT * FROM agendamento WHERE id_servico = '$id_servico' AND id_cliente = NULL;"; 
+        $res = mysqli_query($mysqli,$sql);
+        $linhas = mysqli_num_rows($res);
+        for($i = 0; $i < $linhas; $i++){
+        $servico = mysqli_fetch_array($res);
+        echo "Dia: ".$servico["dia"]."<br>";
+        echo "Hora: ".$servico["hora"]."<br>";
+        echo "<a href='gerenciar_consulta.php?operacao=adicionar_horario&id_agendamento=".$servico["id_agendamento"]."'>
+        Agendar consulta</a><br>";
+        echo "---------------------<br>";
+        }
+    }
+    if($operacao == "adicionar_horario"){
+    $id_cliente = $_SESSION["id"];
+    $id_agendamento = $_GET["id_agendamento"];
+    $sql = "UPDATE agendamento SET id_cliente = '$id_cliente'";
+    $sql .= "WHERE id_agendamento = $id_agendamento;";  
+    mysqli_query($mysqli,$sql);
+    echo "Consulta agendada com sucesso!<br>";
+    echo "<a href='exibir_consulta.php'>Voltar para o início</a>"; 
 
     }
+    if($operacao == "excluir"){
+    $id_agendamento = $_GET["id_agendamento"];
+    $sql = "UPDATE agendamento SET id_cliente = NULL ";
+    $sql .= "WHERE id_agendamento = $id_agendamento;";  
+    if(!mysqli_query($mysqli,$sql)){
+        echo mysqli_error($mysqli);
+    }
+    echo "Consulta cancelada com sucesso!<br>";
+    echo "<a href='exibir_consulta.php'>Voltar para o início</a>"; 
+    }
     ?>
+    
         </div>
     </div>
     <?php
