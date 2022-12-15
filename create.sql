@@ -37,13 +37,6 @@ CREATE TABLE administrador (
     primary key(id_administrador)
 );
 
-    /Senha do administrador: 11235813/
-
-INSERT INTO `administrador` (
-    `id_administrador`, `cpf`, `nome`, `email`, `nascimento`, `telefone`, `senha`)
-VALUES (
-    NULL, '111.111.111-11', 'Administrador Teste da Silva', 'admin.admin@gmail.com', '2022-09-29', '777777777', '$2y$10$qIHZ.sNSwcfds5Z9eTL8iO5YTTYfapkknh1s9.zTCyDDiBGijaOBC'
-    );
 
 CREATE TABLE servico (
     id_servico int NOT NULL AUTO_INCREMENT,
@@ -57,14 +50,16 @@ CREATE TABLE agendamento (
     dia date,
     hora time,
     id_cliente int,
-    primary key(id_agendamento),
-    foreign key(id_cliente) references cliente(id_cliente)
-);
-
-CREATE TABLE item_servico (
-	id_agendamento int,
     id_servico int,
-    primary key(id_agendamento, id_servico),
-    foreign key(id_agendamento) references agendamento(id_agendamento),
+    primary key(id_agendamento),
+    foreign key(id_cliente) references cliente(id_cliente),
     foreign key(id_servico) references servico(id_servico)
 );
+
+    /Senha do administrador: 11235813/
+
+INSERT INTO `administrador` (
+    `id_administrador`, `cpf`, `nome`, `email`, `nascimento`, `telefone`, `senha`)
+VALUES (
+    NULL, '111.111.111-11', 'Administrador Teste da Silva', 'admin.admin@gmail.com', '2022-09-29', '(77) 77777-7777', '$2y$10$qIHZ.sNSwcfds5Z9eTL8iO5YTTYfapkknh1s9.zTCyDDiBGijaOBC'
+    );
