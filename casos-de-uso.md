@@ -53,7 +53,6 @@ Ator
 ### CDU 02 - Administrar quadro de horários
 Ator
 -administrador
--Veterinário
 
 **Fluxo Principal**
 
