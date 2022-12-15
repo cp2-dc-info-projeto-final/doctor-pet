@@ -15,7 +15,6 @@
 - administrador <br>
 - Funcionário <br>
 - Veterinário <br>
-- Recepcionista <br>
 - Cliente
 
 ## Diagrama de Casos de Uso
@@ -54,7 +53,6 @@ Ator
 ### CDU 02 - Administrar quadro de horários
 Ator
 -administrador
--recepcionista
 -Veterinário
 
 **Fluxo Principal**
@@ -107,7 +105,6 @@ Ator
 ### CDU 04 - Agendar Consulta
 Ator
 -Cliente
--Recepcionista 
 -administrador
 
  **Fluxo principal**
@@ -168,11 +165,11 @@ Ator
 
 ### CDU 06 -solicitar serviço
 Ator
--recepcionista
+-usuário
 
 **Fluxo Principal**
 1. O sistema exibe os serviços;
-2. O(a) recepcionista seleciona o serviço desejado;
+2. O(a)usuário seleciona o serviço desejado;
 3. O sistema verifica se o serviço estar disponivél;
 4. O sistema confirma o agendamento.
 ![image](https://user-images.githubusercontent.com/111400121/203125957-7ef5291e-859a-4b6a-a699-cffe551448f8.png)
@@ -185,7 +182,7 @@ Ator
 
 **Fluxo Alternativo B**
 1. O sistema exibe os serviços;
-2. O(a) recepcionista seleciona o serviço desejado;
+2. O(a) usuaário seleciona o serviço desejado;
 3. O sistema verifica se o serviço estar disponivél;
 4. O sistema não encontra serviço disponivél:
 5. O sistema encerra a ação.
@@ -197,7 +194,7 @@ Ator
 
 **Fluxo Principal**
 1. O usuário preenche os dados do pet
-2. O(a) recepcionista seleciona o serviço desejado;
+2. O(a) usuário seleciona o serviço desejado;
 3. O sistema verifica se o serviço estar disponivél;
 4. O sistema confirma o agendamento.
 
