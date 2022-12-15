@@ -4,11 +4,10 @@
 
  - [CDU 01](#CDU-01): Login
  - [CDU 03](#CDU-02): Administrar cadastro dos usuários
- - [CDU 04](#CDU-03): Agendar consultas
+ - [CDU 04](#CDU-03): Solicitar serviços
  - [CDU 05](#CDU-04): Criar serviços
- - [CDU 06](#CDU-05): solicitar serviços
- - [CDU 07](#CDU-06): Cadastrar dados dos clientes
- - [CDU 08](#CDU-07): Cadastrar dados dos funcionários
+ - [CDU 07](#CDU-05): Cadastrar dados dos clientes
+ - [CDU 08](#CDU-06): Cadastrar dados dos funcionários
 
 ## Lista dos Atores
 - administrador <br>
@@ -79,7 +78,7 @@ Ator
 3. O usuário escolhe a opção Cancelar.
 
 
-### CDU 03 - Agendar Consulta
+### CDU 03 - Solicitar serviços
 Ator
 -Cliente
 -administrador
@@ -140,22 +139,7 @@ Ator
 4. caso de uso encerrado.
 ![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
 
-### CDU 05 -solicitar serviço
-Ator
--usuário
 
-**Fluxo Principal**
-1. O sistema exibe os serviços;
-2. O(a)usuário seleciona o serviço desejado;
-3. O sistema verifica se o serviço estar disponivél;
-4. O sistema confirma o agendamento.
-![image](https://user-images.githubusercontent.com/111400121/203125957-7ef5291e-859a-4b6a-a699-cffe551448f8.png)
-
-**Fluxo Alternativo A**
-1. O sistema exibe os serviços;
-2. Nenhum serviço é solicitado;
-3. O sistema encerra a ação.
-![image](https://user-images.githubusercontent.com/111400121/203127117-1c37a73d-cdd0-4624-af6c-19e29da0303a.png)
 
 **Fluxo Alternativo B**
 1. O sistema exibe os serviços;
@@ -165,7 +149,7 @@ Ator
 5. O sistema encerra a ação.
 ![image](https://user-images.githubusercontent.com/111400121/203131896-67fdef28-c9af-484e-b887-e34e4e32982e.png)
 
-### CDU 06 - cadastrar dados do cliente
+### CDU 05 - cadastrar dados do cliente
 Ator
 -administrador
 
