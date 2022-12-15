@@ -92,7 +92,8 @@ Ator
 6. O sistema verifica se todos os dados foram fornecidos.
 7. O sistema exibe uma mensagem de confirmação. 
 
-![image](https://user-images.githubusercontent.com/111400121/204054517-385ba0c0-ef42-4f33-a325-9dc74274663c.png)
+
+![tcc diagrama](https://user-images.githubusercontent.com/111608418/207936561-63d9470c-cfc0-4074-b19e-af35979491fc.png)
 
 **Fluxo Alternativo A**
 1. O usuário seleciona a opção Excluir Agendamento. 
@@ -129,7 +130,8 @@ Ator
 5. O sistema armazena os dados do serviço.
 6. O sistema envia ao ator administrador uma mensagem de confirmação.
 7. O caso de uso encerrado.
- ![image](https://user-images.githubusercontent.com/111400121/200863860-ea835e39-d017-4a84-8692-29ea22ee1cd7.png)
+
+![tcc2](https://user-images.githubusercontent.com/111608418/207936240-830c3799-f46d-444f-9f39-00e2b2eefdac.png)
 
 ### Fluxo alternativo de criar serviço:
 
