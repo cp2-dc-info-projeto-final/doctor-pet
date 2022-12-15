@@ -51,3 +51,20 @@ CREATE TABLE servico (
     descricao varchar (50) NOT NULL,
     primary key(id_servico)
 );
+
+CREATE TABLE agendamento (
+	id_agendamento int NOT NULL AUTO_INCREMENT,
+    dia date,
+    hora time,
+    id_cliente int,
+    primary key(id_agendamento),
+    foreign key(id_cliente) references cliente(id_cliente)
+);
+
+CREATE TABLE item_servico (
+	id_agendamento int,
+    id_servico int,
+    primary key(id_agendamento, id_servico),
+    foreign key(id_agendamento) references agendamento(id_agendamento),
+    foreign key(id_servico) references servico(id_servico)
+);
