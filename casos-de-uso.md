@@ -3,13 +3,12 @@
 ## Lista dos Casos de Uso
 
  - [CDU 01](#CDU-01): Login
- - [CDU 02](#CDU-02): Administrar quadro de horários
- - [CDU 03](#CDU-03): Administrar cadastro dos usuários
- - [CDU 04](#CDU-04): Agendar consultas
- - [CDU 05](#CDU-05): Criar serviços
- - [CDU 06](#CDU-06): solicitar serviços
- - [CDU 07](#CDU-07): Cadastrar dados dos clientes
- - [CDU 08](#CDU-08): Cadastrar dados dos funcionários
+ - [CDU 03](#CDU-02): Administrar cadastro dos usuários
+ - [CDU 04](#CDU-03): Agendar consultas
+ - [CDU 05](#CDU-04): Criar serviços
+ - [CDU 06](#CDU-05): solicitar serviços
+ - [CDU 07](#CDU-06): Cadastrar dados dos clientes
+ - [CDU 08](#CDU-07): Cadastrar dados dos funcionários
 
 ## Lista dos Atores
 - administrador <br>
@@ -49,28 +48,7 @@ Ator
 ![fluxo-alternativoA-login](https://user-images.githubusercontent.com/111400121/201171890-984f30a1-8127-4395-9891-f5edc97d229f.jpg)
 
 
-
-### CDU 02 - Administrar quadro de horários
-Ator
--administrador
-
-**Fluxo Principal**
-
-1. O sistema solicita identificação do usuário.
-2. O usuário tem permissão para acessar o quadro de horário.
-3. O sistema exibe uma mensagem de confirmação.
-4. O sistema libera o acesso ao quadro de horário.
-4. O usuário verifica dia/horário de cada profissional.
- 
-
-**Fluxo Alternativo**
-
-1. O sistema solicita identificação do usuário.
-2. O usuário não tem permissão para acessar o quadro de horário.
-3. O sistema exibe uma mensagem de erro.
-3. O sistema retorna ao passo 1 do fluxo principal.
-
-### CDU 03 - Administrar cadastro dos usuário
+### CDU 02 - Administrar cadastro dos usuário
 
 Ator
 -administrador
@@ -101,7 +79,7 @@ Ator
 3. O usuário escolhe a opção Cancelar.
 
 
-### CDU 04 - Agendar Consulta
+### CDU 03 - Agendar Consulta
 Ator
 -Cliente
 -administrador
@@ -141,7 +119,7 @@ Ator
 ![image](https://user-images.githubusercontent.com/111400121/206539112-4d46892b-d342-4a8b-99b6-602fa700f16b.png)
 
 
-### CDU 05-Criar serviço
+### CDU 04-Criar serviço
 Ator
 -administrador
 
@@ -162,7 +140,7 @@ Ator
 4. caso de uso encerrado.
 ![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
 
-### CDU 06 -solicitar serviço
+### CDU 05 -solicitar serviço
 Ator
 -usuário
 
@@ -187,7 +165,7 @@ Ator
 5. O sistema encerra a ação.
 ![image](https://user-images.githubusercontent.com/111400121/203131896-67fdef28-c9af-484e-b887-e34e4e32982e.png)
 
-### CDU 07 - cadastrar dados do cliente
+### CDU 06 - cadastrar dados do cliente
 Ator
 -administrador
 
