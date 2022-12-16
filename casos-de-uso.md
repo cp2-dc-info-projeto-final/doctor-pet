@@ -152,22 +152,24 @@ Ator
 5. O sistema encerra a ação.
 ![image](https://user-images.githubusercontent.com/111400121/203131896-67fdef28-c9af-484e-b887-e34e4e32982e.png)
 
-### CDU 05 - cadastrar dados do cliente
+### CDU 05 - cadastrar dados do usuário
 Ator
 -Administrador
 -Usuário
 
 **Fluxo Principal**
-1. O usuário preenche os dados do pet
-2. O(a) usuário seleciona o serviço desejado;
-3. O sistema verifica se o serviço estar disponivél;
-4. O sistema confirma o agendamento.
+1. O usuário preenche os dados do usuário
+2. O sistema armazena no banco de dados
+3. o sistema envia uma mensagem de sucesso!
+
+![image](https://user-images.githubusercontent.com/111400121/208182130-45b6b42a-6c36-420d-9905-cd8b44a57bfd.png)
 
 **Fluxo Alternativo A**
-1. O usuário preenche os dados do pet
+1. O usuário preenche os dados do usuário
 2. Os dados do pet foram preenchido incorretamente
 3. O sistema exibe uma mensagem de erro
 4. O sistemma voltara para a página inicial
 
+![image](https://user-images.githubusercontent.com/111400121/208181864-ec9ae9f1-1d13-455b-978c-e49345b89b2d.png)
 
 
