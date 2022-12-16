@@ -77,11 +77,6 @@
             echo "<a href='cadastro_usuario.php'>Voltar para o início</a>";
             $erro = 1;
         }
-            
-
-
-        $sql = "SELECT * FROM cliente WHERE telefone = '$telefone';";
-        $res = mysqli_query($mysqli, $sql);
         
         if(strlen($senha) < 5 or strlen($senha) >10){
             echo "Por favor, digite a senha entre 5 e 10 caracteres.<br>";

@@ -31,7 +31,6 @@
     <a href="gerenciar_funcionarios.php">Gerenciar funcionários</a>
     <a href="gerenciar_administradores.php">Gerenciar administradores</a>
     <a href="editar_servicos.php">Gerenciar serviços</a>
-    <a href="disponibilizar_horarios.php">Disponibilizar horários</a>
   </nav>
   </nav>
   <?php

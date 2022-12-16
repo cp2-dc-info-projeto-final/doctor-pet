@@ -30,7 +30,7 @@
         $id_cliente = $_SESSION["id"];
         $id_servico = $_GET["id_servico"];
         $_SESSION["id_servico"] = $id_servico;
-        $sql = "SELECT * FROM agendamento WHERE id_servico = '$id_servico' AND id_cliente = NULL;"; 
+        $sql = "SELECT * FROM agendamento WHERE id_servico = '$id_servico' AND id_cliente IS NULL;";
         $res = mysqli_query($mysqli,$sql);
         $linhas = mysqli_num_rows($res);
         for($i = 0; $i < $linhas; $i++){

@@ -46,7 +46,7 @@
             echo "Dia: $dia <br>";
             echo "Hora: $hora <br>";
             echo "Horário cadastrado!<br>";
-            echo "<a href='gerenciar_servicos.php'>Voltar para o início</a>";
+            echo "<a href='editar_servicos.php'>Voltar para o início</a>";
             }
         ?>
         </div>
