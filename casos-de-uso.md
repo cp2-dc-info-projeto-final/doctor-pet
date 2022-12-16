@@ -3,16 +3,15 @@
 ## Lista dos Casos de Uso
 
  - [CDU 01](#CDU-01): Login
- - [CDU 03](#CDU-02): Administrar cadastro dos usuários
- - [CDU 04](#CDU-03): Solicitar serviços
- - [CDU 05](#CDU-04): Criar serviços
- - [CDU 07](#CDU-05): Cadastrar dados dos clientes
- - [CDU 08](#CDU-06): Cadastrar dados dos funcionários
+ - [CDU 02](#CDU-02): Administrar cadastro dos usuários
+ - [CDU 03](#CDU-03): Solicitar serviços
+ - [CDU 04](#CDU-04): Criar serviços
+ - [CDU 05](#CDU-05): Cadastrar dados dos clientes
+ - [CDU 06](#CDU-06): Cadastrar dados dos funcionários
 
 ## Lista dos Atores
 - administrador <br>
 - Funcionário <br>
-- Veterinário <br>
 - Cliente
 
 ## Diagrama de Casos de Uso
@@ -123,6 +122,8 @@ Ator
 Ator
 -administrador
 
+**Fluxo Principal**
+
 1. O caso de uso inicia com o ator administrador solicitando a criação de um novo serviço.
 2. O sistema apresenta o formulário para ser preenchimento.
 3. O ator administrador preenche o formularuo.
@@ -153,13 +154,20 @@ Ator
 
 ### CDU 05 - cadastrar dados do cliente
 Ator
--administrador
+-Administrador
+-Usuário
 
 **Fluxo Principal**
 1. O usuário preenche os dados do pet
 2. O(a) usuário seleciona o serviço desejado;
 3. O sistema verifica se o serviço estar disponivél;
 4. O sistema confirma o agendamento.
+
+**Fluxo Alternativo A**
+1. O usuário preenche os dados do pet
+2. Os dados do pet foram preenchido incorretamente
+3. O sistema exibe uma mensagem de erro
+4. O sistemma voltara para a página inicial
 
 
 
