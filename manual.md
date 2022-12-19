@@ -3,27 +3,88 @@ O site da empresa fictícia Doctor Pet tem como objetivo o agendamento online de
 
 **Lista das Funcionalidades:**
 
+ - [login](#login)
  - [cadastrar usuário](#cadastrar-usuário)
  - [administrar usuário](#administrar-usuário)
  - [cadastrar serviços](#cadastrar-serviços)
  - [disponibilizar data e hora](#disponibiliizar-dia-e-hora)
  - [agendar serviço](#agendar-serviço)
- - 
+ 
 
-## Funcionalidade X
+## Login
+![img1](https://user-images.githubusercontent.com/111608418/208495656-5bd4b6dc-1fff-4dfc-b074-e2169ee01876.png)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat molestie justo non tincidunt. Praesent tristique, elit convallis eleifend congue, nisl ex lobortis lorem, ac gravida tellus lacus eu enim. Aliquam urna turpis, convallis id turpis et, iaculis consequat nunc. Proin elit orci, imperdiet nec tristique nec, tincidunt ut nibh. Donec dignissim urna ut erat imperdiet aliquam. Vestibulum augue leo, pellentesque malesuada egestas quis, molestie at lacus. Donec rhoncus finibus lorem, accumsan interdum sapien facilisis sit amet. Integer odio magna, sodales at varius at, dapibus vitae ante. Sed ac ullamcorper ex. Ut in metus ipsum. Duis vulputate porta mi, id venenatis massa ornare vel. Nunc ornare malesuada elit sed feugiat.
+Ao abrir o site o sistema validará se você estar logado, caso não esteja logado será apresentado á tela acima; <br>
+clique no botão "Página de login".
 
-Aliquam in convallis quam, egestas consectetur felis. Integer in dolor sit amet neque volutpat faucibus ut porttitor libero. Morbi faucibus non purus nec finibus. Pellentesque lacus nunc, ultricies quis enim at, vehicula semper nibh. Ut eget erat blandit, porta nibh sit amet, facilisis felis. Aliquam vitae consequat nisi, ut vestibulum sapien. Sed ornare quis leo quis cursus. Vestibulum ut quam odio. Donec sit amet risus augue. Curabitur venenatis a tortor ac placerat.
+![img2](https://user-images.githubusercontent.com/111608418/208497688-80ef9a21-7062-4ffc-9617-32d31233c29e.png)
 
-## Funcionalidade Y
+Após clicar no botão "Página de login" você será redirecionado á tela acima, para fazer login; <br>
+preencha os campos "e-mail e senha" corretamente.
 
-In vestibulum euismod orci, vitae mollis neque luctus vel. Aliquam erat volutpat. Pellentesque nulla elit, iaculis posuere interdum a, imperdiet sollicitudin dui. Morbi consectetur cursus dictum. Etiam vel feugiat tortor, non tempor nibh. Nam eu massa libero. Donec id eleifend justo, tempus consectetur augue. Phasellus porttitor ex leo. Proin efficitur ante vel tortor tempus ornare. Cras molestie, velit non laoreet lobortis, nisl metus volutpat augue, id dictum libero ipsum a mi. Quisque eget tristique felis.
+![img3](https://user-images.githubusercontent.com/111608418/208499188-3748d302-97c1-477e-b9a5-3dc0c8d0001d.png)
 
-Donec auctor a orci a semper. Nunc consequat dui vel eros faucibus molestie. Praesent euismod purus nec justo iaculis varius. Integer vehicula ac metus at ultricies. Maecenas pulvinar neque sed est sollicitudin, vitae dignissim magna posuere. Sed consectetur, mi nec bibendum sodales, urna sem aliquam leo, mollis vulputate justo leo vel nunc. Sed lacinia ipsum lacus, ultrices iaculis tellus efficitur at. Proin consectetur orci ac egestas aliquam. Proin dignissim euismod turpis sollicitudin interdum. Mauris pellentesque, orci non accumsan lobortis, nunc felis hendrerit tortor, non rutrum risus nisl id erat.
+Caso você seja administrador será redirecionado para está tela, onde será apresentada algumas funcionalidades: Cadastrar usuários, gerenciar clientes, gerenciar funcionários, gerenciar administradores, gerenciar serviços e disponibilizar horários.
 
-## Funcionalidade Z
+![img12](https://user-images.githubusercontent.com/111608418/208513989-83824320-3b33-4962-b515-62d5f651f15d.png)
+Caso você seja cliente será redirecionado para está tela, onde será apresentada algumas funcionalidades: Agendar consultas e exibir consultas marcadas.
 
-Sed consequat, diam in imperdiet fringilla, magna metus vehicula ipsum, eu tincidunt massa dolor eget lorem. Integer pellentesque in massa in eleifend. Phasellus a interdum enim. Nullam malesuada nulla eu mi vestibulum imperdiet. Maecenas diam dolor, commodo eget commodo at, congue in libero. Morbi non erat enim. Nunc faucibus lacus urna. Aliquam erat volutpat. Aliquam ex nunc, dictum vel libero sit amet, varius pulvinar risus. Aenean tempus magna at nulla elementum, vel feugiat turpis sodales. Vestibulum viverra congue nibh sed tempor. Morbi faucibus rhoncus dictum. Vestibulum rutrum, nisi id porttitor posuere, purus leo accumsan turpis, sit amet rutrum nulla turpis sit amet ex. Sed ultricies pharetra libero, sed tempor tellus hendrerit eget. Maecenas nibh sem, accumsan ullamcorper felis sed, pharetra semper dolor. Pellentesque ornare lorem eu condimentum tincidunt.
+## Cadastrar usuário
+![img4](https://user-images.githubusercontent.com/111608418/208500623-c3c95510-c38a-4814-9cb5-4050bc79e3c7.png)
 
-Nam lacinia gravida velit et ultricies. Quisque blandit a ligula at tincidunt. Vestibulum id odio a lectus maximus tempor non in augue. Duis vulputate dui vitae lacus ornare, et eleifend erat cursus. Mauris viverra, massa vel eleifend tempus, nunc justo tempus quam, ac sollicitudin lorem arcu vitae magna. Aliquam eleifend diam neque, at sagittis eros scelerisque vitae. Sed convallis iaculis tempor. Pellentesque in varius velit. Cras ut risus at ligula tristique tincidunt ac a risus. Morbi egestas tincidunt nunc, molestie aliquam nisl imperdiet egestas. Morbi hendrerit augue ac accumsan posuere. Sed a sodales elit. Nullam pharetra rhoncus arcu, eget pharetra massa egestas ut. Sed accumsan auctor dictum. Duis leo enim, pulvinar ut enim a, tempor aliquam dui. Nunc aliquet quam justo, sed aliquet justo tincidunt sed.
+Preencha os campos necessário; <br>
+Defina o tipo de usuário; <br>
+Em seguida clique no botão "Enviar".
+
+
+## Gerenciar cliente
+
+![img5](https://user-images.githubusercontent.com/111608418/208503337-426117a5-1e43-4b8d-a709-41fa17ea113b.png)
+
+Digite o nome do usuário que você deseja encontrar; <br>  
+Em seguida clique no batão "mostrar cliente" para mostrar clientes cadastrados.
+
+## Gerenciar funcionário
+
+![img6](https://user-images.githubusercontent.com/111608418/208504436-e63a1f6d-a9e9-4f8d-90ae-373c7c059f7b.png)
+
+Digite o nome do funcionário que você deseja encontrar; <br>  
+Em seguida clique no batão "mostrar funcionário" para mostrar funcionário cadastrados.
+
+## Gerenciar administrador
+
+![img7](https://user-images.githubusercontent.com/111608418/208505027-2b87b998-1681-4dd0-94bb-ec3d6128ee5d.png)
+
+Digite o nome do administrador que você deseja encontrar; <br>  
+Em seguida clique no batão "mostrar administrador" para mostrar administrador cadastrados.
+
+## Gerenciar serviços
+
+![img8](https://user-images.githubusercontent.com/111608418/208505372-af4c2912-aafa-4903-ac7e-b230fb151102.png)
+ 
+Preencha os campos necessário para criar um novo serviço; <br>
+Clique no botão "enviar" para validar o serviço. 
+<br>
+Clique no botão "exibir serviços" para exibir serviços disponivéis.
+<br>
+Digite o nome do serviço que você deseja encontrar; <br>  
+Em seguida clique no batão "mostrar serviço" para mostrar serviço cadastrados.
+ 
+## Disponibilizar horário
+
+![img9](https://user-images.githubusercontent.com/111608418/208509922-cf63a4e2-01fc-4363-83c0-5fae144f188b.png)
+
+Após ser exibida a tela acima, escolha o serviço desejado; <br>
+Clique no botão "disponibilizar horário"
+
+![img10](https://user-images.githubusercontent.com/111608418/208510646-c4a168bb-1e49-41e8-b955-6d5a675ebc81.png)
+
+preencha os campos dia e hora; <br>
+em seguida clique no botão "enviar" para disponibilizar horário.
+
+![img11](https://user-images.githubusercontent.com/111608418/208512030-cb1771ba-1647-42bf-8aff-c416e1ec398c.png)
+
+
+
+
+
