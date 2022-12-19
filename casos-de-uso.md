@@ -190,4 +190,4 @@ Ator
 
 ![image](https://user-images.githubusercontent.com/111400121/208181864-ec9ae9f1-1d13-455b-978c-e49345b89b2d.png)
 
-### CDU 06 - cadastrar dados do usuário
+### CDU 06 - Disponibilizar horário
