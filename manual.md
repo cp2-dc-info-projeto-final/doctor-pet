@@ -1,11 +1,14 @@
 # Manual do Usuário
-
+O site da empresa fictícia Doctor Pet tem como objetivo o agendamento online de consultas veterinárias. O site disponibilizará um login para o cliente, funcionário e o gerente, podendo ser efetuada o agendamento de consultas, assim como remarcar e cancelar as consultas.
 
 **Lista das Funcionalidades:**
 
- - [Funcionalidade X](#Funcionalidade-X)
- - [Funcionalidade Y](#Funcionalidade-Y)
- - [Funcionalidade Z](#Funcionalidade-Z)
+ - [cadastrar usuário](#cadastrar-usuário)
+ - [administrar usuário](#administrar-usuário)
+ - [cadastrar serviços](#cadastrar-serviços)
+ - [disponibilizar data e hora](#disponibiliizar-dia-e-hora)
+ - [agendar serviço](#agendar-serviço)
+ - 
 
 ## Funcionalidade X
 
