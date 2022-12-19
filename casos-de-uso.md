@@ -54,8 +54,8 @@ Ator
 **Fluxo Principal** 
 
 1. O administrador seleciona a opção cadastrar usuário no menu principal. 
-2. O administrador escolhe a opção cadastrar Profissional.
-3. O sistema solicita os dados necessários para o cadastro do Profissional.
+2. O administrador escolhe a opção cadastrar usuário.
+3. O sistema solicita os dados necessários para o cadastro do usuário.
 4. O usuário fornece os dados e confirma a operação.
 5. O sistema verifica se todos foram fornecidos.
 6. O sistema exibe uma mensagem de confirmação.
@@ -63,8 +63,8 @@ Ator
 
 **Fluxo Alternativo A**
  
-1. O usuário seleciona a opção Excluir Profissional. 
-2. O sistema solicita o código do profissional a ser excluído. 
+1. O usuário seleciona a opção Excluir usuário. 
+2. O sistema solicita o código do usuário a ser excluído. 
 3. O usuário escolhe a opção Cancelar.
 4. O sistema exibe uma mensagem de confirmação.
 ![fluxo alternativo   A- adminastrar cadastro](https://user-images.githubusercontent.com/111400121/201172605-a369bb32-dadd-4c65-a39b-744a6cd26fec.jpg)
@@ -72,12 +72,12 @@ Ator
 
 **Fluxo Alternativo B**
  
-1. O usuário escolhe a opção Alterar Profissional. 
-2. O sistema solicita o código do Profissional a ser alterado. 
-3. O usuário escolhe a opção Cancelar.
+1. O usuário escolhe a opção Alterar usuário. 
+2. O sistema solicita o código do usuário a ser alterado. 
+3. O usuário escolhe a opção alterar.
 
-**Fluxo Alternativo**
-1. O usuário seleciona a opção Agendar no menu principal.
+**Fluxo Alternativo c**
+1. O usuário seleciona a opção cadastrar usuário no menu principal.
 2. O usuário digita os dados incorretamente.
 3. O sistema solicita que o usuário preencha os campos corretamente.
 4. O sistema volta ao passo 3 do Fluxo Principal.
@@ -132,7 +132,7 @@ Ator
 
 1. O caso de uso inicia com o ator administrador solicitando a criação de um novo serviço.
 2. O sistema apresenta o formulário para ser preenchimento.
-3. O ator administrador preenche o formularuo.
+3. O ator administrador preenche o formulário.
 4. O sistema válida os dados do serviço.
 5. O sistema armazena os dados do serviço.
 6. O sistema envia ao ator administrador uma mensagem de confirmação.
@@ -140,11 +140,11 @@ Ator
 
 ![tcc2](https://user-images.githubusercontent.com/111608418/207936240-830c3799-f46d-444f-9f39-00e2b2eefdac.png)
 
-### Fluxo alternativo de criar serviço:
+### Fluxo alternativo A:
 
 1. O caso de uso inicia com o ator administrador solicitando a criação de um novo serviço.
 2. O sistema apresenta o formulário para ser preenchimento.
-3. O ator administrador não preenche adequadamente o formulário. caso de uso encerrado.
+3. O ator administrador não preenche adequadamente o formulário. 
 4. caso de uso encerrado.
 ![image](https://user-images.githubusercontent.com/111400121/200863985-f4bb1677-bc14-4889-9b89-6d295415e955.png)
 
@@ -157,6 +157,18 @@ Ator
 4. O sistema não encontra serviço disponivél:
 5. O sistema encerra a ação.
 ![image](https://user-images.githubusercontent.com/111400121/203131896-67fdef28-c9af-484e-b887-e34e4e32982e.png)
+
+**Fluxo Alternativo c**
+1. O sistema exibe os serviços;
+2. O(a) usuário seleciona o serviço que deseja excluir;
+3. o sistema seleciona a opção "excluir"
+4. o sistema  redireciona o usuário ppara o fluxo principal
+
+**Fluxo Alternativo d**
+1. O usuário escolhe a opção Editar serviços. 
+2. O sistema solicita os dados para a alteração do serviço. 
+3. O usuário escolhe a opção Editar. 
+4. O sistema volta ao passo 4 do Fluxo Principal.
 
 ### CDU 05 - cadastrar dados do usuário
 Ator
@@ -178,4 +190,4 @@ Ator
 
 ![image](https://user-images.githubusercontent.com/111400121/208181864-ec9ae9f1-1d13-455b-978c-e49345b89b2d.png)
 
-
+### CDU 06 - cadastrar dados do usuário
