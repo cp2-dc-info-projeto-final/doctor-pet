@@ -76,6 +76,12 @@ Ator
 2. O sistema solicita o código do Profissional a ser alterado. 
 3. O usuário escolhe a opção Cancelar.
 
+**Fluxo Alternativo**
+1. O usuário seleciona a opção Agendar no menu principal.
+2. O usuário digita os dados incorretamente.
+3. O sistema solicita que o usuário preencha os campos corretamente.
+4. O sistema volta ao passo 3 do Fluxo Principal.
+
 
 ### CDU 03 - Solicitar serviços
 Ator
