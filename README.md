@@ -34,4 +34,27 @@ A tela exibirá o Dia e Hora cadastrados, após a verificação dos campos ,cliq
  Os dados da consulta será exibido na tela, para que os dados sejam excluídos ,clique no botão Excluir agendamento   .
 
 Logo após preencher Dia e Hora clique no botão Agendar consulta, para escolher o tipo de consulta.
+#Fluxo principal do cadastros do usuario:#
+
+1->*VIew*->PREENCHE DADOS DO USUARIO->*Controller*
+
+2->*Controller*TRANSMITIR->*Model*
+
+3->*Model*(->ARMAZENAR DADOS DO USUARIO->*Controller*
+
+4->*Controller*->TRASMITIR->*VIew*
+
+5->*VIew*->EXIBIR MEMSAGEM(Cadastro concluído com sucesso.)
+
+#Fluxo altenativo do cadastro do usuario:#
+
+1->*VIew*->PREENCHE DADOS DO USUARIO->*Controller*
+
+2->*Controller*->TRANSMITI->*Model*
+
+3->*Model*->->NÃO ARMAZENAR OS DADOS DO USUARIO->*Controller*
+
+4->*Controller*->TRASMITIR->*View*-
+
+5->*View*->EXIBIR MEMSAGEM(E não foi possível concluir o cadastro)
 
