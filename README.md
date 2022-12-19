@@ -23,3 +23,15 @@ Projeto Final do Curso Técnico Integrado de Desenvolvimento de Sistemas - Colé
 
 ![Diagrama de Banco de Dados](diagrama-de-banco-de-dados.png)
 
+Preencha os campos Dia e Hora assim, logo pós clique no Botăo enviar.
+
+Espere a mensagem de confirmação do cancelamento da consulta ser exibida na tela, para clicar no botão Voltar para o início.
+
+Espere a mensagem de confirmação do agendamento da consulta ser exibida na tela, para clicar no botão Voltar para o  inicío.
+
+A tela exibirá o Dia e Hora cadastrados, após a verificação dos campos ,clique no botão Voltar para o início.
+
+ Os dados da consulta será exibido na tela, para que os dados sejam excluídos ,clique no botão Excluir agendamento   .
+
+Logo após preencher Dia e Hora clique no botão Agendar consulta, para escolher o tipo de consulta.
+
