@@ -33,7 +33,29 @@ Ator
 3. Os dados são validados no Sistema Externo. 
 4. O sistema exibe que o login e senha são válidos. 
 5. O acesso ao sistema é liberado.
+# fluxo principal de disponibilizar o horário: #
 
+1 ->Viww->-DIGITA HORARIO DESPONIVEIS->Controller *
+
+2->Controller->TRAMITI->Model
+
+3->Model->ARMAZENA HORARIO DESPONIVEIS->*Controller *
+
+4->Controller->TRAMITI->*Controller *
+
+5->* view*->EXEBIR MENSAGEM DE SUCESSO
+
+# fluxo alternativode disponibilizar o horário: #
+
+1 ->Viww->-DIGITA HORARIO DESPONIVEIS->Controller *
+
+2->Controller->TRAMITI->Model
+
+3->Model->NÁO ARMAZENA HORARIO DESPONIVEIS->*Controller *
+
+4->Controller->TRAMITI->*Controller *
+
+5->* view*->EXEBIR MENSAGEM DE ERRO
 ![Fluxo principal do login ](https://user-images.githubusercontent.com/111400121/201171669-6671bf8f-59bc-401e-a0d1-35ab5a762f33.jpg)
 
 
