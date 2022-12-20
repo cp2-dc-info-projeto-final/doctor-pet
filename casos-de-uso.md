@@ -6,8 +6,8 @@
  - [CDU 02](#CDU-02): Administrar cadastro dos usuários
  - [CDU 03](#CDU-03): Solicitar serviços
  - [CDU 04](#CDU-04): Criar serviços
- - [CDU 05](#CDU-05): Cadastrar dados dos clientes
- - [CDU 06](#CDU-06): Cadastrar dados dos funcionários
+ - [CDU 05](#CDU-05): Cadastrar dados dos usuários
+ - [CDU 06](#CDU-06): Disponibilizar horário
 
 ## Lista dos Atores
 - administrador <br>
@@ -213,3 +213,11 @@ Ator
 ![image](https://user-images.githubusercontent.com/111400121/208181864-ec9ae9f1-1d13-455b-978c-e49345b89b2d.png)
 
 ### CDU 06 - Disponibilizar horário
+
+![SequenceDiagram1](https://user-images.githubusercontent.com/101880549/208558220-9459ccf5-ac70-4ed8-ab97-ab56896df295.jpg)
+
+**Fluxo Alternativo A**
+
+![SequenceDiagram2](https://user-images.githubusercontent.com/101880549/208558148-4ad02762-b41d-4f83-acb7-c73f70cc13ed.jpg)
+
+
